@@ -1,0 +1,239 @@
+* {
+  font-family: 'Dosis', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fefcc4;
+}
+
+h1, h2, h3, h4, h5 {
+  color: white;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2em;
+  z-index: 1000;
+  margin: 0;
+  background-color: #bc986a;
+  font-size: 1.5em;
+}
+
+
+header ul {
+  text-align: center;
+  margin: 0;
+}
+
+header li {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.35em 2em;
+
+}
+
+header li a {
+  color: #fefcc4;
+  text-decoration: none;
+}
+
+header li:hover {
+  background-color: #fefcc4;
+  filter: drop-shadow(2px 2px 15px #fefcc4);
+
+}
+
+header li:hover a {
+    color: #659db8;
+}
+
+
+footer {
+  margin-top: 2em;
+  text-align: center;
+  background-color: #bc986a;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  font-size: 1.2em;
+  color: white;
+  padding: 0.5em;
+}
+
+.bottom {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  font-size: 0.7em;
+  color: white;
+  padding: 0.65em;
+}
+
+.wrapper {
+  width: 65%;
+  margin: 6em auto;
+  padding: 2em;
+  font-size: 1.2em;
+}
+
+.anchor{
+  display: block;
+  height: 2em; /*same height as header*/
+  margin-top: -2em; /*same height as header*/
+  visibility: hidden;
+}
+
+#contact1 li {
+  color: white
+}
+
+#contact1 a {
+  color: white;
+  text-decoration: none;
+}
+
+.section {
+  border: black solid 1px;
+  box-shadow: 0.2em 0.2em;
+  border-radius: 1em;
+  margin: 1em 0;
+  background-color: #659db8;
+  position: relative;
+  padding: 2em;
+  transition: background-color 1500ms linear;
+  /* something */
+}
+
+.section:hover {
+  /* background-color: #bc986a; */
+  background-color: #daad86;
+  transition: background-color 1500ms linear;
+}
+
+
+.section h3 {
+  margin-bottom: 0.5em;
+}
+
+.section h3 a {
+  color: white;
+  text-decoration: none;
+}
+
+.section h3 a:hover {
+  color: #659db8;
+  text-decoration: none;
+}
+
+
+.section ul {
+  margin-top: 0.5em;
+}
+
+.section img {
+  height: 8.5em;
+  border-radius: 5%;
+  filter: sepia(80%);
+  float:right;
+  /* margin-left: 1em; */
+  margin: 1em 0 0 1em;
+}
+
+#contact1 img {
+  display: inline-block;
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  margin: 0;
+}
+
+.interlude {
+    height: 60vh;
+    width: 100vw;
+    position: relative;
+    left: calc(-50vw + 50%);
+    /* right:0; */
+    background-attachment: fixed;
+    /* filter: sepia(80%); */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: .3;
+
+}
+
+
+
+#sydney {
+  background-image: url("../images/mapSydney.jpg");
+}
+
+#newHolland {
+  background-image: url("../images/mapNewHolland.jpg");
+}
+
+#tramways {
+  background-image: url("../images/mapTramways.jpg");
+}
+
+#oceania {
+  background-image: url("../images/mapOceania.jpg");
+}
+
+#jackson {
+  background-image: url("../images/mapJackson.jpg");
+}
+
+
+@media only screen and (max-width: 700px) {
+
+  header {
+    position: relative;
+    height: fit-content;
+  }
+
+  .wrapper {
+    width: 95%;
+    margin: 2em auto;
+    padding: 1em;
+    font-size: 1em;
+  }
+
+  .anchor {
+    height: 0;
+    margin-top: 0;
+  }
+
+  #contact1 img {
+    display: none;
+  }
+
+  img {
+    display: none;
+  }
+
+
+  .interlude {
+      filter: blur(0px) sepia(80%);
+      background-image: none;
+      opacity: 0;
+      height: 10vh;
+  }
+
+  footer {
+    font-size: 1em;
+  }
+
+}
