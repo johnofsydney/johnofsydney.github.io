@@ -1,14 +1,16 @@
 * {
   font-family: 'Dosis', sans-serif;
   box-sizing: border-box;
+  color: #69471c;
 }
 
 body {
-  background-color: #fefcc4;
+  background-color: #c4e2dc;
 }
 
 h1, h2, h3, h4, h5 {
-  color: white;
+  /* color: #f37037; */
+  /* color: #ffe8e7; */
 }
 
 h1, h2 {
@@ -24,7 +26,7 @@ header {
   height: 2em;
   z-index: 1000;
   margin: 0;
-  background-color: #bc986a;
+  background-color: #ffe8e7;
   font-size: 1.5em;
 }
 
@@ -38,6 +40,7 @@ header li {
   display: inline-block;
   text-decoration: none;
   padding: 0.35em 2em;
+  color: #f37037;
 
 }
 
@@ -47,8 +50,8 @@ header li a {
 }
 
 header li:hover {
-  background-color: #fefcc4;
-  filter: drop-shadow(2px 2px 15px #fefcc4);
+  background-color: #c4e2dc;
+  filter: drop-shadow(2px 2px 15px #c4e2dc);
 
 }
 
@@ -60,13 +63,13 @@ header li:hover a {
 footer {
   margin-top: 2em;
   text-align: center;
-  background-color: #bc986a;
+  background-color: #ffe8e7;
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
   font-size: 1.2em;
-  color: white;
+  color: #f37037;
   padding: 0.5em;
 }
 
@@ -96,11 +99,11 @@ footer {
 }
 
 #contact1 li {
-  color: white
+  /* color: white */
 }
 
 #contact1 a {
-  color: white;
+  /* color: white; */
   text-decoration: none;
 }
 
@@ -109,7 +112,7 @@ footer {
   box-shadow: 0.2em 0.2em;
   border-radius: 1em;
   margin: 1em 0;
-  background-color: #659db8;
+  background-color: #95d2b3;
   position: relative;
   padding: 2em;
   transition: background-color 1500ms linear;
@@ -117,8 +120,8 @@ footer {
 }
 
 .section:hover {
-  /* background-color: #bc986a; */
-  background-color: #daad86;
+
+  background-color: #ffffff;
   transition: background-color 1500ms linear;
 }
 
@@ -128,7 +131,7 @@ footer {
 }
 
 .section h3 a {
-  color: white;
+  /* color: white; */
   text-decoration: none;
 }
 
@@ -160,7 +163,7 @@ footer {
 }
 
 .interlude {
-    height: 60vh;
+    height: 20vh;
     width: 100vw;
     position: relative;
     left: calc(-50vw + 50%);
