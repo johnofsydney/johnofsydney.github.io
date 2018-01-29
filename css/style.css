@@ -239,9 +239,8 @@ footer {
   }
 
   header li:hover {
-    /* background-color: #fefcc4; */
-    /* filter: drop-shadow(2px 2px 15px #fefcc4); */
-
+    background-color: #bc986a;
+    filter: none;
   }
 
 }
