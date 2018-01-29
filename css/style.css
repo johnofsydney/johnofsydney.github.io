@@ -222,9 +222,9 @@ footer {
     display: none;
   }
 
-  img {
+  /* img {
     display: none;
-  }
+  } */
 
 
   .interlude {
@@ -241,6 +241,10 @@ footer {
   header li:hover {
     background-color: #bc986a;
     filter: none;
+  }
+
+  #divButtStyle {
+    display: none;
   }
 
 }

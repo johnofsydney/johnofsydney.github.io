@@ -1,4 +1,9 @@
 console.log("connected");
+let state = {
+  styleCounter: 0
+};
+
+
 
 (function($) {
     $.fn.goTo = function() {
@@ -32,6 +37,23 @@ $(document).on('ready', function () {
   $('#divButtWelcome').on('click', function () {
     $('#welcome').goTo();
   })
+  $('#divButtStyle').on('click', function () {
+    let styles = ["css/Fresh_style.css", "css/style.css"]
+    
+    console.log(state.styleCounter);
+    state.styleCounter = state.styleCounter + 1;
+    if (state.styleCounter >= styles.length) {
+      state.styleCounter = 0
+    }
+
+    var link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.type = "text/css";
+    link.href = styles[state.styleCounter];
+
+    $('head').append(link)
+  })
+
 
 
 })
