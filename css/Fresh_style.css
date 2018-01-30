@@ -1,16 +1,32 @@
+:root {
+    --main-bg-color: #c4e2dc;
+    --header-footer-bg-color: white;
+    --section-bg-color: #e4e0de;
+    --section-hover-bg-color: white;
+
+    --light-text-color: #f37037;
+    --dark-text-color: #69471c;
+    --heading-text-color: #1e3865;
+
+    --link-hover-text-color: var(--light-text-color);
+    --header-footer-text-color: var(--light-text-color);
+    --section-text-color: var(--dark-text-color);
+}
+
+
+
+
 * {
   font-family: 'Dosis', sans-serif;
   box-sizing: border-box;
-  color: #69471c;
 }
 
 body {
-  background-color: #c4e2dc;
+  background-color: var(--main-bg-color);
 }
 
 h1, h2, h3, h4, h5 {
-  /* color: #f37037; */
-  /* color: #ffe8e7; */
+  color: var(--heading-text-color);
 }
 
 h1, h2 {
@@ -26,7 +42,7 @@ header {
   height: 2em;
   z-index: 1000;
   margin: 0;
-  background-color: #ffe8e7;
+  background-color: var(--header-footer-bg-color);
   font-size: 1.5em;
 }
 
@@ -40,38 +56,40 @@ header li {
   display: inline-block;
   text-decoration: none;
   padding: 0.35em 2em;
-  color: #f37037;
+  /* color: var(--main-bg-color); */
+  color: var(--header-footer-text-color);
 
-}
-
-header li a {
-  color: #fefcc4;
-  text-decoration: none;
 }
 
 header li:hover {
-  background-color: #c4e2dc;
-  filter: drop-shadow(2px 2px 15px #c4e2dc);
+  background-color: var(--main-bg-color);
+  filter: drop-shadow(2px 2px 15px var(--main-bg-color));
+  color: var(--dark-text-color);
 
-}
-
-header li:hover a {
-    color: #659db8;
 }
 
 
 footer {
   margin-top: 2em;
   text-align: center;
-  background-color: #ffe8e7;
+  background-color: var(--header-footer-bg-color);
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
   font-size: 1.2em;
-  color: #f37037;
+  color: var(--header-footer-text-color);
   padding: 0.5em;
 }
+
+footer a {
+  color: var(--header-footer-text-color);
+}
+
+footer a:hover {
+  color: var(--dark-text-color);
+}
+
 
 .bottom {
   text-align: center;
@@ -80,7 +98,6 @@ footer {
   bottom: 0;
   width: 100%;
   font-size: 0.7em;
-  color: white;
   padding: 0.65em;
 }
 
@@ -93,18 +110,22 @@ footer {
 
 .anchor{
   display: block;
-  height: 2em; /*same height as header*/
-  margin-top: -2em; /*same height as header*/
+  height: 5em; /*same height as header*/
+  margin-top: -5em; /*same height as header*/
   visibility: hidden;
 }
 
 #contact1 li {
-  /* color: white */
+  color: var(--dark-text-color);
 }
 
 #contact1 a {
-  /* color: white; */
+  color: var(--dark-text-color);
   text-decoration: none;
+}
+
+#contact1 a:hover {
+  color: var(--link-hover-text-color);
 }
 
 .section {
@@ -112,17 +133,17 @@ footer {
   box-shadow: 0.2em 0.2em;
   border-radius: 1em;
   margin: 1em 0;
-  background-color: #95d2b3;
+  background-color: var(--section-bg-color);
+  color: var(--section-text-color);
   position: relative;
   padding: 2em;
-  transition: background-color 1500ms linear;
-  /* something */
+  transition: all 1500ms linear;
+
 }
 
 .section:hover {
-
-  background-color: #ffffff;
-  transition: background-color 1500ms linear;
+  background-color: var(--section-hover-bg-color);
+  transition: all 1500ms linear;
 }
 
 
@@ -131,12 +152,12 @@ footer {
 }
 
 .section h3 a {
-  /* color: white; */
+  color: var(--heading-text-color);
   text-decoration: none;
 }
 
 .section h3 a:hover {
-  color: #659db8;
+  color: var(--link-hover-text-color);
   text-decoration: none;
 }
 
@@ -150,7 +171,6 @@ footer {
   border-radius: 5%;
   filter: sepia(80%);
   float:right;
-  /* margin-left: 1em; */
   margin: 1em 0 0 1em;
 }
 
@@ -163,7 +183,7 @@ footer {
 }
 
 .interlude {
-    height: 20vh;
+    height: 40vh;
     width: 100vw;
     position: relative;
     left: calc(-50vw + 50%);
@@ -173,7 +193,7 @@ footer {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    opacity: .3;
+    opacity: 1;
     margin-top: 5em;
     margin-bottom: 5em;
 
@@ -182,23 +202,23 @@ footer {
 
 
 #sydney {
-  background-image: url("../images/mapSydney.jpg");
+  background-image: url("../images/cloudsOne.png");
 }
 
 #newHolland {
-  background-image: url("../images/mapNewHolland.jpg");
+  background-image: url("../images/cloudsTwo.png");
 }
 
 #tramways {
-  background-image: url("../images/mapTramways.jpg");
+  background-image: url("../images/cloudsThree.png");
 }
 
 #oceania {
-  background-image: url("../images/mapOceania.jpg");
+  background-image: url("../images/cloudsFour.png");
 }
 
 #jackson {
-  background-image: url("../images/mapJackson.jpg");
+  background-image: url("../images/cloudsFive.png");
 }
 
 
@@ -225,9 +245,9 @@ footer {
     display: none;
   }
 
-  img {
+  /* img {
     display: none;
-  }
+  } */
 
 
   .interlude {
@@ -242,9 +262,12 @@ footer {
   }
 
   header li:hover {
-    /* background-color: #fefcc4; */
-    /* filter: drop-shadow(2px 2px 15px #fefcc4); */
+    background-color: #bc986a;
+    filter: none;
+  }
 
+  #divButtStyle {
+    display: none;
   }
 
 }

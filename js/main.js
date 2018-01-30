@@ -1,6 +1,6 @@
 console.log("connected");
 let state = {
-  styleCounter: 0
+  styleCounter: 1
 };
 
 
@@ -9,7 +9,7 @@ let state = {
     $.fn.goTo = function() {
         $('html, body').animate({
             scrollTop: $(this).offset().top + 'px'
-        }, 'fast');
+        }, 'slow');
         return this; // for chaining...
     }
 })(jQuery);
@@ -39,7 +39,7 @@ $(document).on('ready', function () {
   })
   $('#divButtStyle').on('click', function () {
     let styles = ["css/Fresh_style.css", "css/style.css"]
-    
+
     console.log(state.styleCounter);
     state.styleCounter = state.styleCounter + 1;
     if (state.styleCounter >= styles.length) {

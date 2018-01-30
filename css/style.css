@@ -1,14 +1,31 @@
+:root {
+    --main-bg-color: #fefcc4;
+    --header-footer-bg-color: #bc986a;
+    --section-bg-color: #659db8;
+    --section-hover-bg-color: #daad86;
+
+    --light-text-color: white;
+    --dark-text-color: black;
+
+    --link-hover-text-color: var(--section-bg-color);
+    --header-footer-text-color: var(--main-bg-color);
+    --section-text-color: var(--dark-text-color);
+}
+
+
+
+
 * {
   font-family: 'Dosis', sans-serif;
   box-sizing: border-box;
 }
 
 body {
-  background-color: #fefcc4;
+  background-color: var(--main-bg-color);
 }
 
 h1, h2, h3, h4, h5 {
-  color: white;
+  color: var(--light-text-color);
 }
 
 h1, h2 {
@@ -24,7 +41,7 @@ header {
   height: 2em;
   z-index: 1000;
   margin: 0;
-  background-color: #bc986a;
+  background-color: var(--header-footer-bg-color);
   font-size: 1.5em;
 }
 
@@ -38,37 +55,40 @@ header li {
   display: inline-block;
   text-decoration: none;
   padding: 0.35em 2em;
+  /* color: var(--main-bg-color); */
+  color: var(--header-footer-text-color);
 
-}
-
-header li a {
-  color: #fefcc4;
-  text-decoration: none;
 }
 
 header li:hover {
-  background-color: #fefcc4;
-  filter: drop-shadow(2px 2px 15px #fefcc4);
+  background-color: var(--main-bg-color);
+  filter: drop-shadow(2px 2px 15px var(--main-bg-color));
+  color: var(--dark-text-color);
 
-}
-
-header li:hover a {
-    color: #659db8;
 }
 
 
 footer {
   margin-top: 2em;
   text-align: center;
-  background-color: #bc986a;
+  background-color: var(--header-footer-bg-color);
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
   font-size: 1.2em;
-  color: white;
+  color: var(--header-footer-text-color);
   padding: 0.5em;
 }
+
+footer a {
+  color: var(--header-footer-text-color);
+}
+
+footer a:hover {
+  color: var(--dark-text-color);
+}
+
 
 .bottom {
   text-align: center;
@@ -77,7 +97,6 @@ footer {
   bottom: 0;
   width: 100%;
   font-size: 0.7em;
-  color: white;
   padding: 0.65em;
 }
 
@@ -90,18 +109,22 @@ footer {
 
 .anchor{
   display: block;
-  height: 2em; /*same height as header*/
-  margin-top: -2em; /*same height as header*/
+  height: 5em; /*same height as header*/
+  margin-top: -5em; /*same height as header*/
   visibility: hidden;
 }
 
 #contact1 li {
-  color: white
+  color: var(--light-text-color);
 }
 
 #contact1 a {
-  color: white;
+  color: var(--light-text-color);
   text-decoration: none;
+}
+
+#contact1 a:hover {
+  color: var(--link-hover-text-color);
 }
 
 .section {
@@ -109,17 +132,17 @@ footer {
   box-shadow: 0.2em 0.2em;
   border-radius: 1em;
   margin: 1em 0;
-  background-color: #659db8;
+  background-color: var(--section-bg-color);
+  color: var(--section-text-color);
   position: relative;
   padding: 2em;
-  transition: background-color 1500ms linear;
-  /* something */
+  transition: all 1500ms linear;
+
 }
 
 .section:hover {
-  /* background-color: #bc986a; */
-  background-color: #daad86;
-  transition: background-color 1500ms linear;
+  background-color: var(--section-hover-bg-color);
+  transition: all 1500ms linear;
 }
 
 
@@ -128,12 +151,12 @@ footer {
 }
 
 .section h3 a {
-  color: white;
+  color: var(--light-text-color);
   text-decoration: none;
 }
 
 .section h3 a:hover {
-  color: #659db8;
+  color: var(--section-bg-color);
   text-decoration: none;
 }
 
@@ -147,7 +170,6 @@ footer {
   border-radius: 5%;
   filter: sepia(80%);
   float:right;
-  /* margin-left: 1em; */
   margin: 1em 0 0 1em;
 }
 
