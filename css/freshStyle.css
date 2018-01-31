@@ -1,14 +1,15 @@
 :root {
-    --main-bg-color: #fefcc4;
-    --header-footer-bg-color: #bc986a;
-    --section-bg-color: #659db8;
-    --section-hover-bg-color: #daad86;
+    --main-bg-color: #a5d2eb;
+    --header-footer-bg-color: white;
+    --section-bg-color: #e4e0de;
+    --section-hover-bg-color: white;
 
-    --light-text-color: white;
-    --dark-text-color: black;
+    --light-text-color: #f37037;
+    --dark-text-color: #69471c;
+    --heading-text-color: #1e3865;
 
-    --link-hover-text-color: var(--section-bg-color);
-    --header-footer-text-color: var(--main-bg-color);
+    --link-hover-text-color: var(--light-text-color);
+    --header-footer-text-color: var(--light-text-color);
     --section-text-color: var(--dark-text-color);
 }
 
@@ -16,7 +17,7 @@
 
 
 * {
-  font-family: 'Dosis', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   box-sizing: border-box;
 }
 
@@ -25,24 +26,13 @@ body {
 }
 
 h1, h2, h3, h4, h5 {
-  color: var(--light-text-color);
+  color: var(--heading-text-color);
 }
 
 h1, h2 {
   text-align: center;
 }
 
-h1 {
-  font-size: 2em;
-}
-
-h2 {
-  font-size: 1.7em;
-}
-
-h3 {
-  font-size: 1.2em;
-}
 
 header {
   position: fixed;
@@ -126,11 +116,11 @@ footer a:hover {
 }
 
 #contact1 li {
-  color: var(--light-text-color);
+  color: var(--dark-text-color);
 }
 
 #contact1 a {
-  color: var(--light-text-color);
+  color: var(--dark-text-color);
   text-decoration: none;
 }
 
@@ -149,6 +139,7 @@ footer a:hover {
   padding: 2em;
   transition: all 1500ms linear;
 }
+
 
 .section li:nth-child(1) {
   color: var(--section-text-color);
@@ -173,6 +164,8 @@ footer a:hover {
 }
 
 
+
+
 .section:hover {
   background-color: var(--section-hover-bg-color);
   color: var(--dark-text-color);
@@ -185,17 +178,17 @@ footer a:hover {
 }
 
 .section h3 a {
-  color: var(--light-text-color);
+  color: var(--heading-text-color);
   text-decoration: none;
 }
 
 .section h3 a:hover {
-  color: var(--section-bg-color);
+  color: var(--link-hover-text-color);
   text-decoration: none;
 }
 
 .section a {
-  color: var(--section-text-color);
+  color: var(--heading-text-color);
   text-decoration: underline;
 }
 
@@ -228,7 +221,7 @@ footer a:hover {
 }
 
 .interlude {
-    height: 60vh;
+    height: 40vh;
     width: 100vw;
     position: relative;
     left: calc(-50vw + 50%);
@@ -238,12 +231,12 @@ footer a:hover {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    opacity: .3;
+    opacity: 1;
     margin-top: 5em;
     margin-bottom: 5em;
     display: block;
     visibility: visible;
-    background-size: 100%;
+    background-size: 50%;
     background-repeat: no-repeat;
 
 }
@@ -251,23 +244,37 @@ footer a:hover {
 
 
 #sydney {
-  background-image: url("../images/mapSydney.jpg");
+  background-image: url("../images/cloudsFour.png");
+  /* background-size: contain; */
+
 }
 
 #newHolland {
-  background-image: url("../images/mapNewHolland.jpg");
+  background-image: url("../images/cloudsTwo.png");
+  /* background-size: contain; */
+  /* background-size: 60%; */
+  /* background-repeat: no-repeat; */
 }
 
 #tramways {
-  background-image: url("../images/mapTramways.jpg");
+  background-image: url("../images/cloudsThree.png");
+  /* background-size: contain; */
+  /* background-size: 60%; */
+  /* background-repeat: no-repeat; */
 }
 
 #oceania {
-  background-image: url("../images/mapOceania.jpg");
+  background-image: url("../images/cloudsFour.png");
+  /* background-size: contain; */
+  /* background-size: 60%; */
+  /* background-repeat: no-repeat; */
 }
 
 #jackson {
-  background-image: url("../images/mapJackson.jpg");
+  background-image: url("../images/cloudsTwo.png");
+  /* background-size: contain; */
+  /* background-size: 60%; */
+  /* background-repeat: no-repeat; */
 }
 
 

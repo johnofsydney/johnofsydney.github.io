@@ -1,14 +1,14 @@
 :root {
-    --main-bg-color: #c4e2dc;
+    --main-bg-color: black;
     --header-footer-bg-color: white;
-    --section-bg-color: #e4e0de;
-    --section-hover-bg-color: white;
+    --section-bg-color: black;
+    --section-hover-bg-color: #dddddd;
 
-    --light-text-color: #f37037;
-    --dark-text-color: #69471c;
-    --heading-text-color: #1e3865;
+    --light-text-color: black;
+    --dark-text-color: white;
+    --heading-text-color: limegreen;
 
-    --link-hover-text-color: var(--light-text-color);
+    --link-hover-text-color: blue;
     --header-footer-text-color: var(--light-text-color);
     --section-text-color: var(--dark-text-color);
 }
@@ -17,7 +17,7 @@
 
 
 * {
-  font-family: 'Dosis', sans-serif;
+  font-family: 'Anonymous Pro', monospace;
   box-sizing: border-box;
 }
 
@@ -27,10 +27,11 @@ body {
 
 h1, h2, h3, h4, h5 {
   color: var(--heading-text-color);
+  font-size: 1em;
 }
 
 h1, h2 {
-  text-align: center;
+  text-align: left;
 }
 
 
@@ -55,7 +56,7 @@ header ul {
 header li {
   display: inline-block;
   text-decoration: none;
-  padding: 0.35em 2em;
+  padding: 0.5em 1em;
   /* color: var(--main-bg-color); */
   color: var(--header-footer-text-color);
 
@@ -64,7 +65,7 @@ header li {
 header li:hover {
   background-color: var(--main-bg-color);
   filter: drop-shadow(2px 2px 15px var(--main-bg-color));
-  color: var(--dark-text-color);
+  color: yellow;
 
 }
 
@@ -78,7 +79,7 @@ footer {
   bottom: 0;
   width: 100%;
   font-size: 1.2em;
-  color: var(--header-footer-text-color);
+  color: limegreen;
   padding: 0.5em;
 }
 
@@ -87,7 +88,7 @@ footer a {
 }
 
 footer a:hover {
-  color: var(--dark-text-color);
+  color: blue;
 }
 
 
@@ -103,8 +104,9 @@ footer a:hover {
 
 .wrapper {
   width: 65%;
-  margin: 6em auto;
-  padding: 2em;
+  /* margin: 6em auto; */
+  margin: 6em 6em 6em 1em;
+  padding: 2em 2em 2em 1em;
   font-size: 1.2em;
 }
 
@@ -116,23 +118,29 @@ footer a:hover {
 }
 
 #contact1 li {
-  color: var(--dark-text-color);
+  color: magenta;
 }
 
+
 #contact1 a {
-  color: var(--dark-text-color);
+  color: magenta;
   text-decoration: none;
 }
 
+
 #contact1 a:hover {
-  color: var(--link-hover-text-color);
+  color: blue;
+  text-decoration: underline;
 }
 
+
+
+
 .section {
-  border: black solid 1px;
-  box-shadow: 0.2em 0.2em;
+  border: none;
+  box-shadow: none;
   border-radius: 1em;
-  margin: 1em 0;
+  margin: 0 0;
   background-color: var(--section-bg-color);
   color: var(--section-text-color);
   position: relative;
@@ -141,8 +149,33 @@ footer a:hover {
 
 }
 
+
+.section li:nth-child(1) {
+  color: red;
+}
+.section li:nth-child(2) {
+  color: limegreen;
+}
+.section li:nth-child(3) {
+  color: blue;
+}
+.section li:nth-child(4) {
+  color: magenta;
+}
+.section li:nth-child(5) {
+  color: red;
+}
+.section li:nth-child(6) {
+  color: limegreen;
+}
+.section li:nth-child(7) {
+  color: blue;
+}
+
+
 .section:hover {
   background-color: var(--section-hover-bg-color);
+  color: var(--light-text-color);
   transition: all 1500ms linear;
 }
 
@@ -151,12 +184,12 @@ footer a:hover {
   margin-bottom: 0.5em;
 }
 
-.section h3 a {
+.section a {
   color: var(--heading-text-color);
   text-decoration: none;
 }
 
-.section h3 a:hover {
+.section a:hover {
   color: var(--link-hover-text-color);
   text-decoration: none;
 }
@@ -175,7 +208,7 @@ footer a:hover {
 }
 
 #contact1 img {
-  display: inline-block;
+  display: none;
   position: absolute;
   right: 1em;
   top: 1em;
@@ -183,7 +216,7 @@ footer a:hover {
 }
 
 .interlude {
-    height: 40vh;
+    height: 0vh;
     width: 100vw;
     position: relative;
     left: calc(-50vw + 50%);
@@ -196,29 +229,41 @@ footer a:hover {
     opacity: 1;
     margin-top: 5em;
     margin-bottom: 5em;
-
+    display: none;
+    visibility: hidden;
 }
 
 
 
 #sydney {
-  background-image: url("../images/cloudsOne.png");
+  background-image: url("../images/codeOne.jpg");
+  /* background-size: cover;
+  background-repeat: no-repeat; */
+
 }
 
 #newHolland {
-  background-image: url("../images/cloudsTwo.png");
+  background-image: url("../images/codeTwo.jpg");
+  /* background-size: cover; */
+  /* background-repeat: no-repeat; */
 }
 
 #tramways {
-  background-image: url("../images/cloudsThree.png");
+  background-image: url("../images/codeThree.jpg");
+  /* background-size: cover; */
+  /* background-repeat: no-repeat; */
 }
 
 #oceania {
-  background-image: url("../images/cloudsFour.png");
+  background-image: url("../images/codeFour.jpg");
+  /* background-size: cover; */
+  /* background-repeat: no-repeat; */
 }
 
 #jackson {
-  background-image: url("../images/cloudsFive.png");
+  background-image: url("../images/codeFive.jpg");
+  /* background-size: cover; */
+  /* background-repeat: no-repeat; */
 }
 
 

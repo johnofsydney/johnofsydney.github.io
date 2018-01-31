@@ -1,6 +1,6 @@
 console.log("connected");
 let state = {
-  styleCounter: 1
+  styleCounter: 0
 };
 
 
@@ -38,9 +38,9 @@ $(document).on('ready', function () {
     $('#welcome').goTo();
   })
   $('#divButtStyle').on('click', function () {
-    let styles = ["css/Fresh_style.css", "css/style.css"]
+    let styles = ["css/style.css", "css/freshStyle.css", "css/darkStyle.css"]
 
-    console.log(state.styleCounter);
+
     state.styleCounter = state.styleCounter + 1;
     if (state.styleCounter >= styles.length) {
       state.styleCounter = 0
@@ -52,6 +52,8 @@ $(document).on('ready', function () {
     link.href = styles[state.styleCounter];
 
     $('head').append(link)
+    console.log(state.styleCounter);
+    console.log(link.href);
   })
 
 
