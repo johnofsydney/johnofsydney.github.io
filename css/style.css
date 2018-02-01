@@ -131,7 +131,7 @@ footer a:hover {
 
 #contact1 a {
   color: var(--light-text-color);
-  text-decoration: none;
+  /* text-decoration: none; */
 }
 
 #contact1 a:hover {
@@ -186,7 +186,7 @@ footer a:hover {
 
 .section h3 a {
   color: var(--light-text-color);
-  text-decoration: none;
+  /* text-decoration: none; */
 }
 
 .section h3 a:hover {
@@ -270,14 +270,32 @@ footer a:hover {
   background-image: url("../images/mapJackson.jpg");
 }
 
+@media only screen and (min-width: 701px) {
+  #bar {
+    display: block;
+  }
+
+  #burger {
+    display: none;
+  }
+
+}
 
 @media only screen and (max-width: 700px) {
 
-  header {
+  /* header {
     position: relative;
     height: fit-content;
+  } */
+
+  #bar {
+    display: none;
   }
 
+  #burger {
+    display: block;
+  }
+  
   .wrapper {
     width: 95%;
     margin: 2em auto;
@@ -315,8 +333,6 @@ footer a:hover {
     filter: none;
   }
 
-  #divButtStyle {
-    display: none;
-  }
+
 
 }

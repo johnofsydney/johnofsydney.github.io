@@ -55,7 +55,7 @@ header ul {
 header li {
   display: inline-block;
   text-decoration: none;
-  padding: 0.35em 2em;
+  padding: 0.35em 1.8em;
   /* color: var(--main-bg-color); */
   color: var(--header-footer-text-color);
 
@@ -322,8 +322,8 @@ footer a:hover {
     filter: none;
   }
 
-  #divButtStyle {
-    display: none;
+  header {
+    font-size: 0.5em;
   }
 
 }
