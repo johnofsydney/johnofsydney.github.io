@@ -22,22 +22,26 @@ $(document).on('ready', function () {
 
 
 
-  $('#divButtContact').on('click', function () {
+  $('.divButtContact').on('click', function () {
     $('#contact').goTo();
+    $('.menuContent').removeClass( "show" );
   })
-  $('#divButtAbout').on('click', function () {
-    $('#aboutme').goTo();
-  })
-  $('#divButtPortfolio').on('click', function () {
+  // $('.divButtAbout').on('click', function () {
+  //   $('#aboutme').goTo();
+  // })
+  $('.divButtPortfolio').on('click', function () {
     $('#portfolio').goTo();
+    $('.menuContent').removeClass( "show" );
   })
-  $('#divButtSummary').on('click', function () {
+  $('.divButtSummary').on('click', function () {
     $('#summary').goTo();
+    $('.menuContent').removeClass( "show" );
   })
-  $('#divButtWelcome').on('click', function () {
+  $('.divButtWelcome').on('click', function () {
     $('#welcome').goTo();
+    $('.menuContent').removeClass( "show" );
   })
-  $('#divButtStyle').on('click', function () {
+  $('.divButtStyle').on('click', function () {
     let styles = ["css/style.css", "css/freshStyle.css", "css/darkStyle.css"]
 
 
@@ -54,8 +58,14 @@ $(document).on('ready', function () {
     $('head').append(link)
     console.log(state.styleCounter);
     console.log(link.href);
+
+    $('.menuContent').removeClass( "show" );
   })
 
+  $('#divButtMenu').on('click', function () {
+    console.log("menu click");
+    $('.menuContent').toggleClass( "show" );
+  })
 
 
 })

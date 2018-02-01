@@ -6,7 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="js/jquery.js" charset="utf-8"></script>
   <script src="js/main.js" charset="utf-8"></script>
+
   <link rel="stylesheet" href="css/style.css">
+  
+  <link rel="stylesheet" href="css/common.css">
+
+
   <link href="https://fonts.googleapis.com/css?family=Dosis|Oxygen" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro|Open+Sans" rel="stylesheet">
 
@@ -16,32 +21,28 @@
 
   <header>
     <ul id="bar">
-      <li id="divButtWelcome">Welcome</li>
-      <li id="divButtPortfolio">Portfolio</li>
-      <li id="divButtSummary">Skills</li>
+      <li class="divButtWelcome">Welcome</li>
+      <li class="divButtPortfolio">Portfolio</li>
+      <li class="divButtSummary">Skills</li>
       <!-- <li id="divButtAbout">About Me</li> -->
-      <li id="divButtContact">Contact</li>
-      <li id="divButtStyle">Cycle CSS</li>
+      <li class="divButtContact">Contact</li>
+      <li class="divButtStyle">Cycle CSS</li>
     </ul>
 
-    <ul id="burger">
-      <li><a href="#d">Home</a></li>
-      <li><a href="#d">About</a></li>
-      <li><a href="#d">Clients</a></li>
-      <li><a href="#d">Contact Us</a></li>
-    </ul>
+    <div id="burger">
+      <div id="divButtMenu"><img src="images/burger.png" width="50px" height="50px"/></div>
+      <ul class="menuContent">
+        <li class="divButtWelcome">Welcome</li>
+        <li class="divButtPortfolio">Portfolio</li>
+        <li class="divButtSummary">Skills</li>
+        <li class="divButtContact">Contact</li>
+        <li class="divButtStyle">Cycle CSS</li>
+      </ul>
+    </div>
+
 
 
   </header>
-
-
-
-  <header id="burger">
-  <a href="#d" class="menu a"></a>
-  <nav class="nav">
-
-  </nav>
-</header>
 
 
 
@@ -64,61 +65,43 @@
 
     <span class="anchor" id="portfolio"></span>
     <div  class="section">
-      <h2>Here are some examples of my work.</h2>
-      <div>
-        <h3><a href="https://johnofsydney.github.io/cryptoTable/" target="_blank">Table of Crypto Currencies</a></h3>
-        <ul>
-          <li>Use of APIs to pull live data from an external source.</li>
-          <li>Retreive and display JSON data</li>
-          <li>Bootstrap CSS for quick and consistent formatting</li>
-          <li>Javascript, including libraries JQuery and Underscore</li>
-        </ul>
-      </div>
-      <div>
-        <h3><a href="https://johnofsydney.github.io/periodicTable/" target="_blank">A Colourful Periodic Table</a></h3>
-        <ul>
-          <li>CSS Grid</li>
-          <li>CSS Animations and Transition effects</li>
-          <li>Javascript, JQuery</li>
-        </ul>
-      </div>
-      <div>
-        <h3><a href="https://johnofsydney.github.io/divBow/" target="_blank">Some JQuery Animations</a></h3>
-        <ul>
-          <li>Flexbox & CSS Grid</li>
-          <li>Javascript, JQuery</li>
-          <li>Animation using setInterval, clearInterval</li>
-        </ul>
-      </div>
-      <div>
-        <h3><a href="https://johnofsydney.github.io/cricAPI/" target="_blank">Current International Cricket Matches</a></h3>
-        <ul>
-          <li>Lightweight CSS framework: <a href="https://github.com/ajusa/lit">lit</a></li>
-          <li>Javascript, JQuery</li>
-          <li>API from <a href="http://www.cricapi.com/">www.cricapi.com/</a></li>
-        </ul>
-      </div>
-      <div>
-        <hr>
-        <p>Below is classwork and projects from the General Assembly course.</p>
-      </div>
+      <h1>Portfolio</h1>
+      <h2>a mixture of GA Projects and my own exercises</h2>
+
       <div>
         <h3><a href="https://jc-project3.herokuapp.com/" target="_blank">Elemental</a></h3>
-        Project 3 of the GA WDI course. This is a Ruby On Rails app running at Heroku.
+        <p>Project 3 of the GA WDI course. This is a Ruby On Rails app running at Heroku.</p>
+        <p>My goal for this project was to present a database driven website, with a clean and simple design, using several javascript libraries and ruby gems. In particular I wanted to manipulate the data from the database using javascript and present it in the form of graphs and animations.</p>
+        <p>The website stores and displays data of elements in the periodic table, the scientists that discovered or described these elements, and the countries where the major deposits may be found</p>
         <ul>
           <li>Built in Ruby on Rails</li>
           <li>Models, Views, Controllers (MVC) application.</li>
           <li>Image upload using Cloudinary</li>
+          <li>Webscraping using NokoGiri</li>
           <li>Javascript libraries: Three.JS, underscore, particle.js and jQuery</li>
           <li>Google geoCharts and bar charts</li>
           <li>Bootstrap CSS, CSS Grid</li>
+          <li>Maths to animate the spinning Three.JS electrons</li>
         </ul>
       </div>
 
+      <div>
+        <h3><a href="https://johnofsydney.github.io/divBow/" target="_blank">Some JQuery Animations</a></h3>
+        <p>This is a single page I wrote to practice and demonstrate some design, animation and maths. The page uses a CSS Grid inside a Flexbox.</p>
+        <p>Click any of the buttons in the left-hand menu to launch the animation effects.</p>
+        <ul>
+          <li>Flexbox & CSS Grid</li>
+          <li>Javascript, JQuery</li>
+          <li>Animation using setInterval, clearInterval</li>
+          <li>Maths to animate the circles</li>
+        </ul>
+      </div>
 
       <div>
         <h3><a href="https://enigmatic-earth-84654.herokuapp.com/" target="_blank">FM_Booker</a></h3>
-        Project 1 of the GA WDI course. This is a Ruby On Rails app running at Heroku.
+        <p>Project 1 of the GA WDI course. This is a Ruby On Rails app running at Heroku.</p>
+        <p>My goal for this project was to prototype an idea for a real-world application, with different classes of users, to use data from the database to drive CSS, to integrate some search functionality and google maps.</p>
+        <p>The application concept is an uber for facilities management companies and service technicians. A booker will create a job, and a technician can select the jobs they want to undertake.</p>
         <ul>
           <li>Built in Ruby on Rails</li>
           <li>Models, Views, Controllers (MVC) application.</li>
@@ -129,23 +112,71 @@
           <li>Bootstrap CSS</li>
         </ul>
       </div>
+
+      <div>
+        <h3><a href="https://johnofsydney.github.io/catPlanet/" target="_blank">catPlanet</a></h3>
+        <p>In the early weeks of the GA course, everyone has to animate a cat walking across the screen to learn about javascript set intervasl. This is my take on the GA WDI animated cat.</p>
+        <ul>
+          <li>Javascript animations</li>
+          <li>View in full screen.</li>
+          <li>Click on the cat</li>
+          <li>Click on the planets</li>
+          <li>Look out for the comet!</li>
+        </ul>
+      </div>
+
       <div>
         <h3><a href="https://johnofsydney.github.io/project0/" target="_blank">Tic Tac Toe / Connect 4 / Othello</a></h3>
-        Project 0 of the GA WDI course.
+        <p>Project 0 of the GA WDI course.</p>
+        <p>Our first solo project, everyone has to make Tic Tac Toe. Instead of working on a one player vs the computer game I concentrated on building in more games and doing my best to re-use as much common game logic as I could.</p>
+        <p>My site allows you to play Tic Tac Toe or Connect 4 or Othello / Reversi, the actual game is selected according to the size of the game board chosen by the user.</p>
         <ul>
           <li>HTML</li>
           <li>CSS</li>
           <li>Javascript, JQuery</li>
         </ul>
       </div>
+
       <div>
-        <h3><a href="https://johnofsydney.github.io/catPlanet/" target="_blank">catPlanet</a></h3>
-        My take on the GA WDI animated cat
+        <h3><a href="https://johnofsydney.github.io/periodicTable/" target="_blank">A Colourful Periodic Table</a></h3>
+        <p>A practice exercise of my own, principally the goal was to gain some experience using CSS Grid.</p>
         <ul>
-          <li>Javascript animations</li>
-          <li>View in full screen.</li>
+          <li>CSS Grid</li>
+          <li>CSS Animations and Transition effects</li>
+          <li>Javascript, JQuery</li>
         </ul>
       </div>
+
+
+
+      <div>
+        <h3><a href="https://johnofsydney.github.io/cryptoTable/" target="_blank">Table of Crypto Currencies</a></h3>
+        <p>A practice exercise of my own, principally the goal was to practice using APIs, in this case data of various crypto currencies.</p>
+        <ul>
+          <li>Use of APIs to pull live data from an external source.</li>
+          <li>Retreive and display JSON data</li>
+          <li>Bootstrap CSS for quick and consistent formatting</li>
+          <li>Javascript, including libraries JQuery and Underscore</li>
+        </ul>
+      </div>
+
+
+      <div>
+        <h3><a href="https://johnofsydney.github.io/cricAPI/" target="_blank">Current International Cricket Matches</a></h3>
+        <p>A practice exercise of my own, principally the goal was to practice using APIs, in this case data of cricket matches.</p>
+        <ul>
+          <li>Lightweight CSS framework: <a href="https://github.com/ajusa/lit">lit</a></li>
+          <li>Javascript, JQuery</li>
+          <li>API from <a href="http://www.cricapi.com/">www.cricapi.com/</a></li>
+        </ul>
+      </div>
+
+
+
+
+
+
+
 
 
     </div>
