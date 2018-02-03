@@ -26,9 +26,6 @@ $(document).on('ready', function () {
     $('#contact').goTo();
     $('.menuContent').removeClass( "show" );
   })
-  // $('.divButtAbout').on('click', function () {
-  //   $('#aboutme').goTo();
-  // })
   $('.divButtPortfolio').on('click', function () {
     $('#portfolio').goTo();
     $('.menuContent').removeClass( "show" );

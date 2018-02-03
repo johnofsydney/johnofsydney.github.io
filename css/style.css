@@ -41,59 +41,26 @@ h3 {
   font-size: 1.2em;
 }
 
-
-
 header li {
-  /* display: inline-block; */
-  /* text-decoration: none; */
   padding: 0.35em 2em;
-  /* color: var(--main-bg-color); */
-  /* color: var(--header-footer-text-color); */
 }
-
-
 
 header li:hover {
-  /* background-color: var(--main-bg-color);
-  filter: drop-shadow(2px 2px 15px var(--main-bg-color)); */
   color: var(--dark-text-color);
-
 }
-
-
-
-
 
 footer {
-  /* margin-top: 2em;
-  text-align: center;
-  background-color: var(--header-footer-bg-color);
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  font-size: 1.2em; */
   color: var(--header-footer-text-color);
-  /* padding: 0.5em; */
 }
-
-
 
 footer a:hover {
   color: var(--dark-text-color);
 }
 
-
-
-
 .wrapper {
-  /* width: 65%; */
   margin: 6em auto;
   padding: 2em;
-  /* font-size: 1.2em; */
 }
-
-
 
 #contact1 li {
   color: var(--light-text-color);
@@ -101,7 +68,6 @@ footer a:hover {
 
 #contact1 a {
   color: var(--light-text-color);
-  /* text-decoration: none; */
 }
 
 #contact1 a:hover {
@@ -113,11 +79,6 @@ footer a:hover {
   box-shadow: 0.2em 0.2em;
   border-radius: 1em;
   margin: 1em 0;
-  /* background-color: var(--section-bg-color); */
-  /* color: var(--section-text-color); */
-  /* position: relative; */
-  /* padding: 2em; */
-  /* transition: all 1500ms linear; */
 }
 
 .section li:nth-child(1) {
@@ -142,19 +103,12 @@ footer a:hover {
   color: var(--section-text-color);
 }
 
-
 .section:hover {
-  /* background-color: var(--section-hover-bg-color); */
   color: var(--dark-text-color);
-  /* transition: all 1500ms linear; */
 }
-
-
-
 
 .section h3 a {
   color: var(--light-text-color);
-  /* text-decoration: none; */
 }
 
 .section h3 a:hover {
@@ -167,47 +121,17 @@ footer a:hover {
   text-decoration: underline;
 }
 
-
-
-
-
-
-
-/* .section img {
-  height: 8.5em;
-  border-radius: 5%;
-  filter: sepia(80%);
-  float:right;
-  margin: 1em 0 0 1em;
-} */
-
 .section img {
   filter: sepia(80%);
 }
 
-
 .interlude {
     height: 60vh;
-    /* width: 100vw; */
-    /* position: relative;
-    left: calc(-50vw + 50%); */
-    /* right:0; */
-    /* background-attachment: fixed; */
-    /* filter: sepia(80%); */
-    /* background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat; */
     opacity: .3;
-    /* margin-top: 5em; */
-    /* margin-bottom: 5em; */
     display: block;
-    /* visibility: visible; */
     background-size: 100%;
     background-repeat: no-repeat;
-
 }
-
-
 
 #sydney {
   background-image: url("../images/mapSydney.jpg");
