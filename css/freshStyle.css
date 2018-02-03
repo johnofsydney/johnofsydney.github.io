@@ -115,6 +115,10 @@ footer a:hover {
   filter: none;
 }
 
+#contact1 img {
+  filter: none;
+}
+
 .interlude {
     height: 40vh;
     opacity: 1;
