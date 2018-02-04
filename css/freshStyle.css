@@ -48,6 +48,7 @@ footer a:hover {
 .wrapper {
   margin: 6em auto;
   padding: 2em;
+    font-size: 1em;
 }
 
 #contact1 li {
@@ -128,22 +129,17 @@ footer a:hover {
 }
 
 #sydney {
-  background-image: url("../images/cloudsFour.png");
-}
-
-#newHolland {
   background-image: url("../images/cloudsTwo.png");
 }
+
+
 
 #tramways {
   background-image: url("../images/cloudsThree.png");
 }
 
-#oceania {
-  background-image: url("../images/cloudsFour.png");
 
-}
 
 #jackson {
-  background-image: url("../images/cloudsTwo.png");
+  background-image: url("../images/cloudsFour.png");
 }

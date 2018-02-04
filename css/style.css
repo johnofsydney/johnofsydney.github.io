@@ -60,7 +60,9 @@ footer a:hover {
 .wrapper {
   margin: 6em auto;
   padding: 2em;
+  font-size: 1.2em;
 }
+
 
 #contact1 li {
   color: var(--light-text-color);
@@ -137,17 +139,17 @@ footer a:hover {
   background-image: url("../images/mapSydney.jpg");
 }
 
-#newHolland {
+/* #newHolland {
   background-image: url("../images/mapNewHolland.jpg");
-}
+} */
 
 #tramways {
   background-image: url("../images/mapTramways.jpg");
 }
 
-#oceania {
+/* #oceania {
   background-image: url("../images/mapOceania.jpg");
-}
+} */
 
 #jackson {
   background-image: url("../images/mapJackson.jpg");

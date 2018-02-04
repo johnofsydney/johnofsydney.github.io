@@ -80,7 +80,6 @@ footer a {
 
 .wrapper {
   width: 65%;
-  font-size: 1.2em;
 }
 
 .anchor{
@@ -166,6 +165,8 @@ footer a {
     margin-top: 5em;
     margin-bottom: 5em;
 }
+
+
 
 @media only screen and (min-width: 1001px) {
   #bar {
