@@ -21,10 +21,6 @@
   box-sizing: border-box;
 }
 
-/* body {
-  background-color: var(--main-bg-color);
-} */
-
 h1, h2, h3, h4, h5 {
   color: var(--heading-text-color);
   font-size: 1em;
@@ -34,58 +30,23 @@ h1, h2 {
   text-align: left;
 }
 
-/*
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 2em;
-  z-index: 1000;
-  margin: 0;
-  background-color: var(--header-footer-bg-color);
-  font-size: 1.5em;
-}
-
-
 header ul {
   text-align: center;
   margin: 0;
 } */
 
 header li {
-  /* display: inline-block; */
-  /* text-decoration: none; */
   padding: 0.5em 1.5em;
-  /* color: var(--main-bg-color); */
-  /* color: var(--header-footer-text-color); */
-
 }
 
 header li:hover {
-  /* background-color: var(--main-bg-color);
-  filter: drop-shadow(2px 2px 15px var(--main-bg-color)); */
   color: yellow;
-
 }
 
 
 footer {
-  /* margin-top: 2em;
-  text-align: center;
-  background-color: var(--header-footer-bg-color);
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  font-size: 1.2em; */
   color: limegreen;
-  /* padding: 0.5em; */
 }
-
-/* footer a {
-  color: var(--header-footer-text-color);
-} */
 
 footer a:hover {
   color: blue;
@@ -94,12 +55,9 @@ footer a:hover {
 
 
 .wrapper {
-  /* width: 65%; */
-  /* margin: 6em auto; */
   margin: 6em 6em 6em 1em;
   padding: 2em 2em 2em 1em;
-  /* font-size: 1.2em; */
-    font-size: 1em;
+  font-size: 1em;
 }
 
 
@@ -111,7 +69,6 @@ footer a:hover {
 
 #contact1 a {
   color: magenta;
-  /* text-decoration: none; */
 }
 
 
@@ -128,12 +85,6 @@ footer a:hover {
   box-shadow: none;
   border-radius: 1em;
   margin: 0 0;
-  /* background-color: var(--section-bg-color);
-  color: var(--section-text-color);
-  position: relative;
-  padding: 2em;
-  transition: all 1500ms linear; */
-
 }
 
 
@@ -161,36 +112,15 @@ footer a:hover {
 
 
 .section:hover {
-  /* background-color: var(--section-hover-bg-color); */
   color: var(--light-text-color);
-  /* transition: all 1500ms linear; */
 }
 
 
 
 .section a {
   color: var(--heading-text-color);
-  /* text-decoration: none; */
 }
 
-
-
-
-/* .section img {
-  height: 8.5em;
-  border-radius: 5%;
-  filter: sepia(80%);
-  float:right;
-  margin: 1em 0 0 1em;
-} */
-
-/* #contact1 img {
-  display: none;
-  /* position: absolute;
-  right: 1em;
-  top: 1em;
-  margin: 0; */
-} */
 
 .section img {
   display: none;
@@ -201,99 +131,5 @@ footer a:hover {
 }
 
 .interlude {
-    height: 0vh;
-    /* width: 100vw; */
-    /* position: relative; */
-    /* left: calc(-50vw + 50%); */
-    /* right:0; */
-    /* background-attachment: fixed; */
-    /* filter: sepia(80%); */
-    /* background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat; */
-    opacity: 1;
-    /* margin-top: 5em; */
-    /* margin-bottom: 5em; */
     display: none;
-    /* visibility: hidden; */
-}
-
-
-
-/* #sydney {
-  background-image: url("../images/codeOne.jpg");
-  /* background-size: cover;
-  background-repeat: no-repeat; */
-
-} */
-
-/* #newHolland {
-  background-image: url("../images/codeTwo.jpg");
-  /* background-size: cover; */
-  /* background-repeat: no-repeat; */
-} */
-
-/* #tramways {
-  background-image: url("../images/codeThree.jpg");
-  /* background-size: cover; */
-  /* background-repeat: no-repeat; */
-} */
-
-/* #oceania {
-  background-image: url("../images/codeFour.jpg");
-  /* background-size: cover; */
-  /* background-repeat: no-repeat; */
-} */
-
-/* #jackson {
-  background-image: url("../images/codeFive.jpg");
-  /* background-size: cover; */
-  /* background-repeat: no-repeat; */
-} */
-
-
-@media only screen and (max-width: 700px) {
-
-  /* header {
-    position: relative;
-    height: fit-content;
-  } */
-
-  /* .wrapper {
-    width: 95%;
-    margin: 2em auto;
-    padding: 1em;
-    font-size: 1em;
-  } */
-
-  /* .anchor {
-    height: 0;
-    margin-top: 0;
-  } */
-
-  /* #contact1 img {
-    display: none;
-  } */
-
-  /* img {
-    display: none;
-  } */
-
-
-  /* .interlude {
-      filter: blur(0px) sepia(80%);
-      background-image: none;
-      opacity: 0;
-      height: 10vh;
-  } */
-
-  /* footer {
-    font-size: 1em;
-  } */
-
-  /* header li:hover {
-    background-color: #bc986a;
-    filter: none;
-  } */
-
 }
