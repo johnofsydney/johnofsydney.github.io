@@ -136,7 +136,10 @@ footer a {
   margin-top: 0.5em;
 }
 
-
+.endorsement {
+  font-style: italic;
+  margin: 3em;
+}
 
 #contact1 img {
   display: inline-block;
@@ -176,7 +179,6 @@ footer a {
 }
 
 @media only screen and (max-width: 1000px) {
-
 
 
   #bar {
