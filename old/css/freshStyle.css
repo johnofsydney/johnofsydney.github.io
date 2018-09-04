@@ -1,0 +1,145 @@
+:root {
+    --main-bg-color: #a5d2eb;
+    --header-footer-bg-color: white;
+    --section-bg-color: #e4e0de;
+    --section-hover-bg-color: white;
+
+    --light-text-color: #f37037;
+    --dark-text-color: #69471c;
+    --heading-text-color: #1e3865;
+
+    --link-hover-text-color: var(--light-text-color);
+    --header-footer-text-color: var(--light-text-color);
+    --section-text-color: var(--dark-text-color);
+}
+
+
+
+* {
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+
+h1, h2, h3, h4, h5 {
+  color: var(--heading-text-color);
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+header li {
+  padding: 0.35em 1.8em;
+}
+
+header li:hover {
+  color: var(--dark-text-color);
+}
+
+footer {
+  color: var(--header-footer-text-color);
+}
+
+footer a:hover {
+  color: var(--dark-text-color);
+}
+
+.wrapper {
+  margin: 6em auto;
+  padding: 2em;
+    font-size: 1em;
+}
+
+#contact1 li {
+  color: var(--dark-text-color);
+}
+
+#contact1 a {
+  color: var(--dark-text-color);
+  /* text-decoration: none; */
+}
+
+#contact1 a:hover {
+  color: var(--link-hover-text-color);
+}
+
+.section {
+  border: black solid 1px;
+  box-shadow: 0.2em 0.2em;
+  border-radius: 1em;
+  margin: 1em 0;
+}
+
+
+.section li:nth-child(1) {
+  color: var(--section-text-color);
+}
+.section li:nth-child(2) {
+  color: var(--section-text-color);
+}
+.section li:nth-child(3) {
+  color: var(--section-text-color);
+}
+.section li:nth-child(4) {
+  color: var(--section-text-color);
+}
+.section li:nth-child(5) {
+  color: var(--section-text-color);
+}
+.section li:nth-child(6) {
+  color: var(--section-text-color);
+}
+.section li:nth-child(7) {
+  color: var(--section-text-color);
+}
+
+.section:hover {
+  color: var(--dark-text-color);
+}
+
+.section h3 a {
+  color: var(--heading-text-color);
+}
+
+.section h3 a:hover {
+  color: var(--link-hover-text-color);
+  text-decoration: none;
+}
+
+.section a {
+  color: var(--heading-text-color);
+  text-decoration: underline;
+}
+
+.section img {
+  filter: none;
+}
+
+#contact1 img {
+  filter: none;
+}
+
+.interlude {
+    height: 40vh;
+    opacity: 1;
+    display: block;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+
+#sydney {
+  background-image: url("../images/cloudsTwo.png");
+}
+
+
+
+#tramways {
+  background-image: url("../images/cloudsThree.png");
+}
+
+
+
+#jackson {
+  background-image: url("../images/cloudsFour.png");
+}

@@ -1,0 +1,41 @@
+.navbar-fixed {
+  /* height: 15rem; */
+}
+
+
+.card-image>.card-title {
+  background-color: rgba(0,0,0,0.5);
+  display: block;
+  width: 100%;
+}
+
+.section {
+  padding-top: 5rem;
+}
+
+.col img {
+  width: 100%
+}
+
+#welcome ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.carousel {
+  height: 40rem;
+}
+
+.carousel-fixed-item {
+  text-align: right;
+}
+
+
+
+
+.google-green   { background: #3cba54; }
+.google-red   { background: #db3236; }
+.google-yellow   { background: #f4c20d; }
+.google-blue   { background: #4885ed; }
+.google-black   { background: #141412; }

@@ -1,0 +1,150 @@
+:root {
+    --main-bg-color: #fefcc4;
+    --header-footer-bg-color: #bc986a;
+    --section-bg-color: #659db8;
+    --section-hover-bg-color: #daad86;
+
+    --light-text-color: white;
+    --dark-text-color: black;
+
+    --link-hover-text-color: var(--section-bg-color);
+    --header-footer-text-color: var(--main-bg-color);
+    --section-text-color: var(--dark-text-color);
+}
+
+
+
+
+* {
+  font-family: 'Dosis', sans-serif;
+  box-sizing: border-box;
+}
+
+
+h1, h2, h3, h4, h5 {
+  color: var(--light-text-color);
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.7em;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+header li {
+  padding: 0.35em 2em;
+}
+
+header li:hover {
+  color: var(--dark-text-color);
+}
+
+footer {
+  color: var(--header-footer-text-color);
+}
+
+footer a:hover {
+  color: var(--dark-text-color);
+}
+
+.wrapper {
+  margin: 6em auto;
+  padding: 2em;
+  font-size: 1.2em;
+}
+
+
+#contact1 li {
+  color: var(--light-text-color);
+}
+
+#contact1 a {
+  color: var(--light-text-color);
+}
+
+#contact1 a:hover {
+  color: var(--link-hover-text-color);
+}
+
+.section {
+  border: black solid 1px;
+  box-shadow: 0.2em 0.2em;
+  border-radius: 1em;
+  margin: 1em 0;
+}
+
+.section li:nth-child(1) {
+  color: var(--section-text-color);
+}
+.section li:nth-child(2) {
+  color: var(--section-text-color);
+}
+.section li:nth-child(3) {
+  color: var(--section-text-color);
+}
+.section li:nth-child(4) {
+  color: var(--section-text-color);
+}
+.section li:nth-child(5) {
+  color: var(--section-text-color);
+}
+.section li:nth-child(6) {
+  color: var(--section-text-color);
+}
+.section li:nth-child(7) {
+  color: var(--section-text-color);
+}
+
+.section:hover {
+  color: var(--dark-text-color);
+}
+
+.section h3 a {
+  color: var(--light-text-color);
+}
+
+.section h3 a:hover {
+  color: var(--section-bg-color);
+  text-decoration: none;
+}
+
+.section a {
+  color: var(--section-text-color);
+  text-decoration: underline;
+}
+
+#contact1 img {
+  filter: sepia(80%);
+}
+
+.interlude {
+    height: 60vh;
+    opacity: .3;
+    display: block;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#sydney {
+  background-image: url("../images/mapSydney.jpg");
+}
+
+
+#tramways {
+  background-image: url("../images/mapTramways.jpg");
+}
+
+
+#jackson {
+  background-image: url("../images/mapJackson.jpg");
+}
