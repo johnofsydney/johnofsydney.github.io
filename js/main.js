@@ -1,5 +1,6 @@
 
 M.AutoInit();
+
 $('.sidenav').sidenav();
 $('.carousel').carousel(
   {
@@ -17,3 +18,16 @@ function autoplay() {
     setTimeout(autoplay, 7500);
 }
 autoplay()
+
+// flosting menu button
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.fixed-action-btn');
+  var instances = M.FloatingActionButton.init(elems, {
+    direction: 'bottom',
+    hoverEnabled: false
+  });
+});
+
+var elem = document.querySelector('.fixed-action-btn');
+
+var instance = M.FloatingActionButton.getInstance(elem);
