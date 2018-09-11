@@ -228,3 +228,36 @@ for (var i = 1; i <=100; i++) {
 
 ### Explain "hoisting".
 - any variables that are declared in the current scope, will be intepreted as if they were declared in the top of the code ("hoisted") regardless of wherever they are actually declared. The assignation of a value will still take place at the actual point in the code where the value is assigned.
+
+
+# Filling in missing questions
+
+### _What kind of things must you be wary of when design or developing for multilingual sites?_
+- First thing is to be able to direct the user to the most sensible part of the site with the right language for them. I would tackle this by getting the country information from the IP address. This is not foolproof, so good to have actions for other languages on the first landing page.
+- As a passage of text translated between say, English to Chinese might end up being a much different number of words / characters. Therefore the design needs to cater for this. Settings for Overflow, Font-Size etc should be considered.
+- Text in images won't be translated
+- Any text that needs to flow right-to-left, or top-to-bottom will need to be handled differently to left-to-right.
+- Make sure you get all the text in menus, footers, alt tags etc, not just the main content.
+
+### _How do you serve a page with content in multiple languages?_
+- detect the language (browser settings, IP address or similar)
+
+
+_Why you would use a srcset attribute in an image tag? Explain the process the browser uses when evaluating the content of this attribute._
+_Consider HTML5 as an open web platform. What are the building blocks of HTML5?
+_What is progressive rendering?_
+_Are you familiar with styling SVG?_
+_Describe BFC (Block Formatting Context) and how it works._
+_How would you approach fixing browser-specific styling issues?_
+_What are some of the "gotchas" for writing efficient CSS?_
+### Can you give an example of an @media property other than screen?
+- I'm aware of @print, but I haven't used it
+_Describe what you like and dislike about the CSS preprocessors you have used._
+_What are some of the advantages/disadvantages of writing JavaScript code in a language that compiles to JavaScript?_
+_Difference between document load event and document DOMContentLoaded event?_
+_How do you organize your code? (module pattern, classical inheritance?)_
+_Why is extending built-in JavaScript objects not a good idea?_
+_What is a closure, and how/why would you use one?_
+_What advantage is there for using the arrow syntax for a method in a constructor?_
+_Explain how prototypal inheritance works_
+_Why would you use something like the load event? Does this event have disadvantages? Do you know any alternatives, and why would you use those?_
