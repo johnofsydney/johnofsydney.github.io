@@ -72,12 +72,12 @@
 
 
 
-
+/* 
 .google-green   { background: #3cba54; }
 .google-red   { background: #db3236; }
 .google-yellow   { background: #f4c20d; }
 .google-blue   { background: #4885ed; }
-.google-black   { background: #141412; }
+.google-black   { background: #141412; } */
 
 @media only screen and (max-width: 900px) {
   .carousel {
