@@ -83,6 +83,11 @@
     border-radius: 0;
 }
 
+code {
+  background-color: #dbdbdb;
+  border-radius: 0.3rem;
+}
+
 
 
 /*
