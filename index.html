@@ -218,7 +218,7 @@
               <li class="collection-item"><a href="https://jointhedots.au/about" target="_blank">Live Site</a></li>
               <li class="collection-item">Hosting: AWS EC2 using <a href="https://hatchbox.io/" target="_blank">Hatchbox</a> for Deployment-as-a-service</li>
               <li class="collection-item">Domain Registration: AWS Route 53</li>
-              <li class="collection-item">ETL: Data comes principally from the <a href="https://www.aec.gov.au/Parties_and_Representatives/financial_disclosure/transparency-register/" target="_blank">AEC transparencey register</a>. It's cleaned with various custom scripts, and thenm imported using a rake task.</li>
+              <li class="collection-item">ETL: Data comes principally from the <a href="https://www.aec.gov.au/Parties_and_Representatives/financial_disclosure/transparency-register/" target="_blank">AEC transparencey register</a>. It's cleaned with various custom scripts, and then imported using a rake task.</li>
               <li class="collection-item">Regex: Mostly at the point of importing of the data, regex are used to determine if a record is a person or a group, if the record represents a political party etc. For people we use regex to identify and remove titles and honorifics.</li>
               <li class="collection-item">Recursion: Crawling from person to connected groups and people, to their connected people and groups.</li>
               <li class="collection-item">Hotwire / Turboframes: Some of those recursive queries can take a long time, Turboframes are used to load slow data asynchronously</li>
