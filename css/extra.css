@@ -1,8 +1,3 @@
-.navbar-fixed {
-  /* height: 15rem; */
-}
-
-
 .card-image>.card-title {
   background-color: rgba(0,0,0,0.5);
   display: block;
@@ -61,7 +56,6 @@
   top: 1rem;
   right: auto;
   bottom: auto;
-  /* margin-left: 5%;  //optional */
 }
 
 .fixed-action-btn > .btn-floating > .material-icons {
@@ -89,14 +83,32 @@ code {
 }
 
 .collapsible-header {
-  /* background-color: aqua; */
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .logo {
-  /* width: 20px; */
   height: 30px;
+}
+
+.logo-collection {
+  /* max-width: 30%; */
+  min-width: 280px;
+  text-align: left;
+}
+
+@media (min-width: 1140px) {
+  .logo-collection {
+    text-align: right;
+    /* For larger screens */
+  }
+}
+
+.job-title {
+  min-width: 480px;
+  padding-bottom: 10px;
+
 }
 
 /*
