@@ -86,29 +86,22 @@ code {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .logo {
   height: 30px;
 }
 
-.logo-collection {
-  /* max-width: 30%; */
-  min-width: 280px;
-  text-align: left;
-}
 
-@media (min-width: 1140px) {
-  .logo-collection {
-    text-align: right;
-    /* For larger screens */
+@media (min-width: 1000px) { /* For larger screens */
+  .collapsible-header {
+    flex-direction: row;
   }
 }
 
 .job-title {
-  min-width: 480px;
   padding-bottom: 10px;
-
 }
 
 /*
