@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="Windows-1252" ?>
+<XML_DIZ_INFO>
+<MASTER_PAD_VERSION_INFO>
+    <MASTER_PAD_VERSION>1.15</MASTER_PAD_VERSION>
+    <MASTER_PAD_INFO>Portable Application Description, or PAD for short, is a data set that is used by shareware authors to disseminate information to anyone interested in their software products. To find out more go to http://www.asp-shareware.org/pad</MASTER_PAD_INFO>
+</MASTER_PAD_VERSION_INFO>
+<Company_Info>
+        <Company_Name>DataHouseSoftware</Company_Name>
+        <Address_1>23 Seventh Avenue</Address_1>
+        <Address_2 />
+        <City_Town>Berala</City_Town>
+        <State_Province>NSW</State_Province>
+        <Zip_Postal_Code>2141</Zip_Postal_Code>
+        <Country>Australia</Country>
+        <Company_WebSite_URL>http://www.datahousesoftware.com</Company_WebSite_URL>
+<Contact_Info>
+        <Author_First_Name>John</Author_First_Name>
+        <Author_Last_Name>Coote</Author_Last_Name>
+        <Author_Email>datahouse@datahousesoftware.com</Author_Email>
+        <Contact_First_Name>John</Contact_First_Name>
+        <Contact_Last_Name>Coote</Contact_Last_Name>
+        <Contact_Email>datahouse@datahousesoftware.com</Contact_Email>
+    </Contact_Info>
+<Support_Info>
+        <Sales_Email>sales@datahousesoftware.com</Sales_Email>
+        <Support_Email>help@datahousesoftware.com</Support_Email>
+        <General_Email>sales@datahousesoftware.com</General_Email>
+        <Sales_Phone />
+        <Support_Phone />
+        <General_Phone />
+        <Fax_Phone />
+    </Support_Info>
+</Company_Info>
+<Program_Info>
+        <Program_Name>DataHouse</Program_Name>
+        <Program_Version>4.01</Program_Version>
+        <Program_Release_Month>01</Program_Release_Month>
+        <Program_Release_Day>21</Program_Release_Day>
+        <Program_Release_Year>2005</Program_Release_Year>
+        <Program_Cost_Dollars>139</Program_Cost_Dollars>
+        <Program_Cost_Other_Code />
+        <Program_Cost_Other />
+        <Program_Type>Shareware</Program_Type>
+        <Program_Release_Status>Major Update</Program_Release_Status>
+        <Program_Install_Support>No Install Support</Program_Install_Support>
+        <Program_OS_Support>Win95,Win98,WinME,WinNT 4.x,WinXP,Windows2000</Program_OS_Support>
+        <Program_Language>English</Program_Language>
+<File_Info>
+        <Filename_Versioned>DH40.zip</Filename_Versioned>
+        <Filename_Previous />
+        <Filename_Generic>DH.zip</Filename_Generic>
+        <Filename_Long>DataHouse.zip</Filename_Long>
+        <File_Size_Bytes>2370000</File_Size_Bytes>
+        <File_Size_K>2370</File_Size_K>
+        <File_Size_MB>2.37</File_Size_MB>
+    </File_Info>
+<Expire_Info>
+        <Has_Expire_Info>N</Has_Expire_Info>
+        <Expire_Count />
+        <Expire_Based_On>Days</Expire_Based_On>
+        <Expire_Other_Info>Evaluation version allows 200 records to be stored. Once the record count exceeds 200 th user must register to continue using the database.</Expire_Other_Info>
+        <Expire_Month />
+        <Expire_Day />
+        <Expire_Year />
+    </Expire_Info>
+        <Program_Change_Info />
+        <Program_Specific_Category>Business</Program_Specific_Category>
+        <Program_Categories>Invoicing, Sales Quotes, Contact Management, CRM, Inventory Management, Product Database</Program_Categories>
+        <Program_System_Requirements>Requires MS Access 2000 or XP</Program_System_Requirements>
+        <Includes_JAVA_VM>N</Includes_JAVA_VM>
+        <Includes_VB_Runtime>N</Includes_VB_Runtime>
+        <Includes_DirectX>N</Includes_DirectX>
+</Program_Info>
+<Program_Descriptions>
+<English>
+        <Keywords>CRM, MRP, Business Software, Sales Quote database, Purchase Orders, Forecasting, Reports, business reports, sales manager, ms access, Microsoft Access,</Keywords>
+        <Char_Desc_45>Cheap and effective business software</Char_Desc_45>
+        <Char_Desc_80>Simple, inexpensive and effective business software. Fast to implement, fast ROI</Char_Desc_80>
+        <Char_Desc_250>Maintain and analyze information on your customers, suppliers, products, sales, and orders with this simple, effective and inexpensive database solution, created using MS Access. Write Quotes and Invoices, track business statistcs and much more.</Char_Desc_250>
+        <Char_Desc_450>DataHouse: Simple, effective business database software made with MS Access. Stop just collecting data, start analyzing and then acting upon it. DataHouse is designed to manage Customer and Supplier Information, Contact Management/History, Product Information, Quote/Sales and Purchase Order Tracking and Document Control. Generate Quotes, Invoices, Purchase Orders, Price Lists, Phone Lists etc. Analyze sales by Country, Customer, Product etc</Char_Desc_450>
+        <Char_Desc_2000>Share contact information between all DataHouse users, maintain several customer sites for one company. Changes that affect several contacts are made only once not for each person. Manage your company's various sites, maintain employee information, keep contact history, single click to e-mail using Outlook, generate professional and consistent Fax and Letters. Store information on products, short description, long description, and up to 10 specification fields, 3 level pricing. Keep Stock information, view activity (Sales due in / Purchase Orders due out). Generate professional and consistent quotations, generate invoices, bill to and ship to addresses for sales, forecast future sales, track quote success rate and trends, track sales trends. Create Price Lists with and without pictures. Analyze sales by Country, Customer, Product etc</Char_Desc_2000>
+</English>
+</Program_Descriptions>
+<Web_Info>
+<Application_URLs>
+        <Application_Info_URL>http://www.datahousesoftware.com</Application_Info_URL>
+        <Application_Order_URL>http://www.datahousesoftware.com/register.htm</Application_Order_URL>
+        <Application_Screenshot_URL>http://www.datahousesoftware.com/images/screen.gif</Application_Screenshot_URL>
+        <Application_Icon_URL />
+        <Application_XML_File_URL>http://www.datahousesoftware.com/pad/DHPadFile.xml</Application_XML_File_URL>
+    </Application_URLs>
+<Download_URLs>
+        <Primary_Download_URL>http://www.datahousesoftware.com/downloads/DataHouse.zip</Primary_Download_URL>
+        <Secondary_Download_URL>http://www.datahousesoftware.com/downloads/DataHouse.zip</Secondary_Download_URL>
+        <Additional_Download_URL_1 />
+        <Additional_Download_URL_2 />
+    </Download_URLs>
+</Web_Info>
+<Permissions>
+        <Distribution_Permissions />
+        <EULA>LICENCE
+Software License for DataHouse 
+
+IMPORTANT -- READ CAREFULLY BEFORE USING THIS SOFTWARE: This License Agreement for the DataHouse Database Application is a legal agreement between you (either an individual or an entity) and DataHouseSoftware and its suppliers and licensors (collectively &quot;DataHouseSoftware&quot;) for the DataHouse Database Application (&quot;Software&quot;).  By installing, copying or otherwise using the Software, you agree to be bound by the terms of this License Agreement.  IF YOU DO NOT AGREE TO THE TERMS OF THIS LICENSE AGREEMENT, DO NOT INSTALL THE SOFTWARE. 
+
+YOU AGREE THAT YOUR USE OF THE SOFTWARE ACKNOWLEDGES THAT YOU HAVE READ THIS LICENSE, UNDERSTAND IT, AND AGREE TO BE BOUND BY ITS TERMS AND CONDITIONS.
+
+MICROSOFT ACCESS (FULL OR  RUNTIME VERSION) IS REQUIRED TO RUN THE DATAHOUSE DATABASE APPLICATION.  USE OF MICROSOFT ACCESS SOFTWARE, IS GOVERNED BY MICROSOFT'S LICENSE AGREEMENT.  DATAHOUSESOFTWARE IS NOT RESPONSIBLE FOR MICROSOFT'S SOFTWARE AND SHALL HAVE NO LIABILITY FOR YOUR USE OF MICROSOFT'S SOFTWARE.
+
+1. LICENSE RESTRICTIONS.
+
+a) You may not: (i) rent, lease, transfer, re-sell or otherwise transfer rights to the Software or Documentation; (ii) remove any proprietary notices or labels on the Software or Documentation.
+
+b) You agree that you shall only use the Software and Documentation in a manner that complies with all applicable laws in the jurisdictions in which you use the Software and Documentation, including, but not limited to, applicable restrictions concerning copyright and other intellectual property rights.  
+
+c) This license does not grant you any right to any enhancement or update. 
+
+2. TITLE.  Title, ownership, rights, and intellectual property rights in and to the Software and Documentation shall remain with DataHouseSoftware.
+
+ 
+3. WARRANTIES AND LIABILITIES.
+
+DISCLAIMER OF WARRANTY &amp; LIMIT OF LIABILITY.  THE SOFTWARE AND DOCUMENTATION ARE PROVIDED AS IS WITHOUT WARRANTY OF ANY KIND.  TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, DATAHOUSESOFTWARE FURTHER DISCLAIMS ALL WARRANTIES, INCLUDING WITHOUT LIMITATION ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT.  THE ENTIRE RISK ARISING OUT OF THE USE OR PERFORMANCE OF THE SOFTWARE AND DOCUMENTATION REMAINS WITH YOU.  TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL DATAHOUSESOFTWARE OR ITS AGENTS BE LIABLE FOR ANY CONSEQUENTIAL, INCIDENTAL, INDIRECT, SPECIAL, PUNITIVE, OR OTHER DAMAGES WHATSOEVER (INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF BUSINESS PROFITS, BUSINESS INTERRUPTION, LOSS OF BUSINESS INFORMATION, OR OTHER PECUNIARY LOSS) ARISING OUT OF THIS AGREEMENT OR THE USE OF OR INABILITY TO USE THE PRODUCT, EVEN IF DATAHOUSESOFTWARE HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. DATAHOUSESOFTWARE'S TOTAL LIABLITY FOR ANY DIRECT DAMAGES SHALL NOT EXCEED THE AMOUNT PAID FOR THE DATAHOUSE DATABASE APPLICATION.  
+
+4. INDEMNIFICATION.  This Software is intended for use only with properly licensed media and content.  You agree to hold harmless DATAHOUSESOFTWARE in connection with the Software in violation of another party's rights or in violation of any law.
+
+5. NO ASSIGNMENT.  This Agreement is personal to you, and may not be assigned without DataHouseSoftware's express written consent.  In the event that you are an entity that merges with another entity or are acquired by another entity during the Term, you shall provide written notice of such merger or acquisition not later than the date on which any public announcement is made.  If DataHouseSoftware does not consent to assignment of this Agreement to the new or acquiring entity in such merger or acquisition, DataHouseSoftware may terminate this Agreement immediately.
+
+6. TECHNICAL SUPPORT.  Technical support for the Software is provided by DataHouseSoftware via the DataHouse discussion list. Join at www.datahousesoftware.com/contact.htm</EULA>
+</Permissions>
+</XML_DIZ_INFO>

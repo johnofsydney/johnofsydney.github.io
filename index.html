@@ -229,6 +229,44 @@
             </ul>
           </div>
         </li>
+        <li> <!-- Picture Liker -->
+          <div class="collapsible-header">
+            <div class="job-title">
+              <i class="material-icons">people_outline</i>Picture Liker
+            </div>
+            <div class="logo-collection">
+              <img class="logo" src="images/ec2.png" />
+              <img class="logo" src="images/ruby.png" />
+              <img class="logo" src="images/rails.png" />
+              <img class="logo" src="images/hotwire.png" />
+              <img class="logo" src="images/sidekiq.svg" />
+              <img class="logo" src="images/rekognition.png" />
+              <img class="logo" src="images/tailwind.png" />
+            </div>
+          </div>
+          <div class="collapsible-body">
+            <h5>Picture Liker</h5>
+            <p>This is a demo project for a design company who were interested in capturing likes and dislikes of their clients prior to commencing work.</p>
+            <p>AdminUsers have full CRUD access, Users can like or dislike a number of pictures.</p>
+            <ul class="collection">
+              <li class="collection-item">Ruby: 3.2, Rails: 7, SQLite3, Sidekiq</li>
+              <li class="collection-item"><a href="https://github.com/johnofsydney/picture_liker" target="_blank">Github Repo</a></li>
+              <li class="collection-item"><a href="https://aptest.johncoote.com" target="_blank">Live Site</a> (visit <code>/users/sign_up</code> to create an account)</li>
+              <li class="collection-item">Hosting: AWS EC2 using <a href="https://hatchbox.io/" target="_blank">Hatchbox</a> for Deployment-as-a-service</li>
+              <li class="collection-item">Domain Registration: AWS Route 53</li>
+
+              <li class="collection-item">Authentication: Devise</li>
+              <li class="collection-item">Administration: ActiveAdmin</li>
+              <li class="collection-item">File Storage: ActiveStorage (AWS S3)</li>
+              <li class="collection-item">CSS: Tailwind</li>
+
+
+              <li class="collection-item">Hotwire / Turbostream: When a picture is liked/disliked, Turbostream is used to update the status of the clicked button, and also to disable other buttons once the limit has been reached </li>
+
+              <li class="collection-item">Image Recognition: AWS Rekognition. Using the AWS SDK, the image is sent to Rekognition, and the resulting labels saved back on to the picture record.</li>
+            </ul>
+          </div>
+        </li>
         <li> <!-- Bastardos -->
           <div class="collapsible-header">
             <div class="job-title">
@@ -408,7 +446,25 @@
             <h5>RSpec Tutorial / Notes</h5>
             <p>My RSpec notes, which I started when I was a junior, have added to over time, and which I have provided to several junior engineers over the years now</p>
             <ul class="collection">
-              <li class="collection-item"><a href="https://github.com/johnofsydney/notes/blob/master/rails/rspec.md" target="_blank">RSpec Document</a></li>
+              <li class="collection-item"><a href="https://github.com/johnofsydney/notes/blob/master/rails/rspec.md" target="_blank">RSpec Document</a>
+              </li>
+            </ul>
+          </div>
+        </li> <!-- End Section -->
+        <li> <!-- DataHouseSoftware -->
+          <div class="collapsible-header">
+            <div class="job-title">
+              <i class="material-icons">people</i>DataHouse & Pipeline
+            </div>
+            <div class="logo-collection">
+              <img class="logo" src="images/access.png" />
+            </div>
+          </div>
+          <div class="collapsible-body">
+            <h5>DataHouse & Pipeline</h5>
+            <p>Before I learnt any Ruby or Javascript, I created and sold 2 Software Products; DataHouse, an Inventory Management system including Quotes, Invoices, Purchase Orders and Pipeline, a Recruitment Management system</p>
+            <p>Both of these products were built in Microsoft Access, tightly copupled with MS Outlook for Email and Calendar functions.</p>
+            <ul class="collection">
             </ul>
           </div>
         </li> <!-- End Section -->

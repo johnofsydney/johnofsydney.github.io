@@ -1,0 +1,369 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Sparkling   
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20100529
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>DataHouseSoftware - database software for small business</title>
+<link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<div id="wrapper">
+	<div id="header-wrapper">
+		<div id="header">
+			<div id="logo">
+				<!--<img border="0" align="center" src="images/dhlogo.jpg" alt="DataHouse - Shareware Invoicing Database, Contact History & Management and More." > -->
+
+				 <h1>DataHouseSoftware</h1>
+				<p>Database Software for Business</p>
+					<!--<img border="0" align="center" src="images/dhlogo.jpg" alt="DataHouse - Shareware Invoicing Database, Contact History & Management and More." > -->
+					<BR>
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+			</div>
+			<div id="menu">
+				<ul>
+					<li><a href="../index.html">Home</a></li>
+					<li><a href="../pipeline/index.html">Pipeline</a></li>
+					<li><a href="../datahouse/index.html">DataHouse</a></li>
+					<li><a href="../contact.html">Contact Us</a></li>
+					<li class="current_page_item"><a href="index.html">Access Tips</a></li>
+					<li><a href="../links.html">Links</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- end #header -->
+	<div id="page">
+		<div id="page-bgtop">
+			<div id="page-bgbtm">
+				<div id="content">
+				
+				<div class="post">
+						
+						<h3 class="title">Microsoft Access Tips</h3>
+						<div class="entry">
+							<p> A few of the functions we've used in DataHouse and Pipeline. Please feel free to use all and any tips, code etc in your own applications. All tips, code etc is provided without any warranty implied, use at your own risk.</P>
+
+<B>ACCESS 2007 RIBBON</B> - Custom ribbon XML and VBA code<BR>
+<BR>
+<BR>
+We use the ribbon as the primary navigation tool in Pipeline. Creating a ribbon is essentially a two part process; code the xml for the ribbon, and the vba code that executes the action. <BR>
+<BR>
+The main source of information on Ribbons (including a ribbon customiser) can be found at <a href="http://www.accessribbon.de/en/index.php?Welcome">www.accessribbon.de</a>  and we also found the following site useful <a href="http://www.rptsoftware.com/help/microsoft_access_general/ribbon2.asp">www.rptsoftware.com</a><BR>
+<BR>
+The ribbon is designed with xml and lives in a table called UsysRibbons. The two fields RibbonName and RibbonXML must be included, RibbonXML is where the xml lives. Our table has two records, RibbonName for the two is Form and Report (see below for the xml)
+When a button is clicked something has to happen (in Pipeline, mostly this is forms opening)
+In-built buttons such as control idMso="SortUp" require no coding, their action is built in to Access
+Custom buttons such as button id="DashboardButton" can fire action in code or a macro. We use the code below, fired by the OnAction line in the xml. In the xml shown below the images are the inbuilt Access ones. You can use the callback getImage="onGetImage" to use your own images. Note that image transparencies are not preserved using LoadPicture. To do this you can use the function LoadPictureGDIP from <a href="http://www.accessribbon.de/en/index.php?Welcome">www.accessribbon.de</a> make sure you include basOGL and the correct references.<BR>
+<BR>
+<BR>
+Some stuff to watch out for;<BR>
+A lot of instructions for customising ribbons suggest you create a ribbon for your entire database and specify it at Office Menu > Access Options > Current Database > Ribbon and Toolbar Options. We found that when we did this the ribbon disappeared when previewing reports. We solved this problem by not specifying a ribbon for the whole database, instead specifying one for each form and report. All the forms use the Form ribbon and all the reports use the Report ribbon. For forms and reports the ribbon is specified in the properties section under the Other tab.<BR>
+Each subform that receives the focus must have the ribbon specified. If no ribbon is specified the default Access toolbar will reappear when the subform gets the focus.<BR>
+You'll need the right references for working with ribbons. Read all about references at http://www.accessribbon.de/en/index.php?Welcome<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+
+
+
+
+
+
+
+<B>RIBBON XML FOR FORM</B> (using built in icons in toolbar)<BR>
+<BR>
+<BR>
+<PRE>
+<xmp>
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui" onLoad="onRibbonLoad">
+     <ribbon startFromScratch="true">
+         <tabs>
+            <tab id="tabHome" label="Pipeline by DataHouseSoftware">
+               <group id="grpData" label="Forms"  visible="true">
+<button id="DashboardButton" label="Dashboard"  imageMso="OpenStartPage" size="large" onAction="OnActionButton" screentip="Dashboard"/> 
+<button id="CompanyButton" label="Companies" imageMso="MeetingsWorkspace" size="large" onAction="OnActionButton" screentip="Companies"/>
+<button id="ContactButton" label="Contacts" imageMso="DistributionListSelectMembers" size="large" onAction="OnActionButton" screentip="Contacts"/>
+<button id="JobButton" label="Job" imageMso="FileCreateDocumentWorkspace" size="large" onAction="OnActionButton" screentip="Jobs"/>
+<button id="FinancesButton" label="Finances" imageMso="Calculator" size="large" onAction="OnActionButton" screentip="Invoices"/>
+<button id="ActivityButton" label="Activity" imageMso="TableDrawTable" size="large" onAction="OnActionButton" screentip="Calls"/>
+<button id="SearchButton" label="Search" imageMso="FilePrintPreview" size="large" onAction="OnActionButton" screentip="Search"/>
+<button id="PipelineButton" label="Pipeline" imageMso="ViewAllProposals" size="large" onAction="OnActionButton" screentip="Pipeline"/>
+<button id="ContractorsButton" label="Contractors" imageMso="CreateTableTemplatesGallery" size="large" onAction="OnActionButton" screentip="Contractors"/>
+<button id="ConsultancyButton" label="Consultancy" imageMso="DatabasePermissionsMenu" size="large" onAction="OnActionButton" screentip="Consultancy"/>
+<button id="ReportsButton" label="Reports" imageMso="ChartPrimaryHorizontalGridlines"  size="large" onAction="OnActionButton" screentip="Reports"/>
+<button id="AboutButton" label="About" imageMso="FilePackageAndSign" size="large" onAction="OnActionButton" screentip="About"/>
+<button id="CloseButton" label="Close" imageMso="PrintPreviewClose" size="large" onAction="OnActionButton" screentip="Close"/>
+<button id="ExitButton" label="Exit" imageMso="PictureEffectsShadowGallery" size="large" onAction="OnActionButton" screentip="Exit"/>
+               </group>
+
+<group id="grpSearch" label="Tools"  visible="true">
+  <control idMso="SortSelectionMenu"/>
+  <control idMso="FilterClearAllFilters"/>
+  <control idMso="RecordsDeleteRecord"/>
+  <control idMso="SortUp"/>
+  <control idMso="SortDown"/>
+</group>
+
+            </tab>
+        </tabs>
+    </ribbon>
+</customUI>
+
+</xmp>
+</PRE>
+
+
+
+===================<BR>
+<BR>
+<BR>
+<B>RIBBON XML FOR REPORT</B><BR>
+<BR>
+<BR>
+<PRE>
+<xmp>
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui">
+    <ribbon startFromScratch="true">
+        <tabs>
+            <tab id="tabPrintPreview" label="Preview">
+               <group id="grpPrint" label="Print"  visible="true">
+                    <button idMso="PrintDialogAccess" 
+			size="large" label="Print" 
+			imageMso="PrintDialogAccess"/>
+                </group>
+               <group id="grpZoom" label="Zoom"  visible="true">
+                    <splitButton idMso="PrintPreviewZoomMenu" size="large"/>
+                    <toggleButton idMso="ZoomFitToWindow" size="large"/>
+                    <toggleButton idMso="ZoomOnePage" size="large"/>
+                    <toggleButton idMso="PrintPreviewZoomTwoPages" size="large"/>
+                </group>
+
+                <group id="grpClosePreview" label="Close Preview"  visible="true">
+                    <button idMso="PrintPreviewClose" 
+			size="large" label="Close Preview" 
+			imageMso="PrintPreviewClose"/>
+                </group>
+            </tab>
+        </tabs>
+    </ribbon>
+</customUI>
+</xmp>
+</PRE>
+<BR>
+<BR>
+===================
+<BR>
+<BR>
+<B>VBA Code in Public Functions</B><BR>
+<BR>
+<BR>
+<PRE>
+Public Sub OnActionButton(control As IRibbonControl)
+'Callbackname in XML File "onAction"
+On Error Resume Next
+    Select Case control.ID
+        Case "DashboardButton"
+            Dim stDocName As String
+            stDocName = "frmDashboard"
+            DoCmd.OpenForm stDocName, acNormal
+        Case "CompanyButton"
+            Dim stDocName2 As String
+            stDocName2 = "frmCompany"
+            DoCmd.OpenForm stDocName2, acNormal
+        Case "ContactButton"
+            Dim stDocName3 As String
+            stDocName3 = "frmContact"
+            DoCmd.OpenForm stDocName3, acNormal
+        Case "JobButton"
+            Dim stDocName4 As String
+            stDocName4 = "frmJob"
+            DoCmd.OpenForm stDocName4, acNormal
+        Case "FinancesButton"
+            Dim stDocName5 As String
+            stDocName5 = "frmFinances"
+            DoCmd.OpenForm stDocName5, acNormal
+        Case "ActivityButton"
+            Dim stDocName6 As String
+            stDocName6 = "frmActivity"
+            DoCmd.OpenForm stDocName6, acNormal
+        Case "SearchButton"
+            Dim stDocName7 As String
+            stDocName7 = "frmSearch"
+            DoCmd.OpenForm stDocName7, acNormal
+        Case "PipelineButton"
+            Dim stDocName8 As String
+            stDocName8 = "frmPipeline"
+            DoCmd.OpenForm stDocName8, acNormal
+        Case "ContractorsButton"
+            Dim stDocName9 As String
+            stDocName9 = "frmContractors"
+            DoCmd.OpenForm stDocName9, acNormal
+        Case "ConsultancyButton"
+            Dim stDocName10 As String
+            stDocName10 = "frmConsultancy"
+            DoCmd.OpenForm stDocName10, acNormal
+        Case "ReportsButton"
+            Dim stDocName11 As String
+            stDocName11 = "frmReports"
+            DoCmd.OpenForm stDocName11, acNormal
+        Case "AboutButton"
+            Dim stDocName12 As String
+            stDocName12 = "frmAbout"
+            DoCmd.OpenForm stDocName12, acNormal
+        
+        Case "CloseButton"
+            DoCmd.Close
+            
+        
+        Case "ExitButton"
+            DoCmd.Quit
+            
+            
+    End Select
+End Sub
+
+
+=================
+
+Function onGetImage(control As IRibbonControl, ByRef image)
+    Select Case control.ID
+    Case "Test1":
+        Set image = LoadPicture("F:\DataHouse\Icons\ac0001-64.gif")
+    Case "Test2":
+        Set image = LoadPictureGDIP("F:\DataHouse\Icons\ac0001-64.ico")
+    Case "Test3":
+         Set image = LoadPictureGDIP("F:\DataHouse\Icons\ac0001-64.png")
+        
+
+                
+    End Select
+End Function
+
+
+=================
+</PRE>
+<BR>
+<BR>
+<B>RIBBON XML FOR FORM</B> (using custom icons, specified using getImage="OnGetImage" )<BR>
+<BR>
+<BR>
+<PRE>
+<xmp>
+
+
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui" onLoad="onRibbonLoad">
+    <ribbon startFromScratch="true">
+        <tabs>
+            <tab id="tabHome" label="Pipeline by DataHouseSoftware">
+               <group id="grpData" label="Forms"  visible="true">
+<button id="DashboardButton" label="Dashboard"  getImage="onGetImage" size="large" onAction="OnActionButton"/> 
+<button id="CompanyButton" label="Companies" getImage="onGetImage" size="large" onAction="OnActionButton"/>
+<button id="ContactButton" label="Contacts" getImage="onGetImage" size="large" onAction="OnActionButton"/>
+<button id="JobButton" label="Job" getImage="onGetImage" size="large" onAction="OnActionButton"/>
+<button id="FinancesButton" label="Finances" getImage="onGetImage" size="large" onAction="OnActionButton"/>
+<button id="ActivityButton" label="Activity" getImage="onGetImage" size="large" onAction="OnActionButton"/>
+<button id="SearchButton" label="Search" getImage="onGetImage" size="large" onAction="OnActionButton"/>
+<button id="PipelineButton" label="Pipeline" getImage="onGetImage" size="large" onAction="OnActionButton"/>
+<button id="ContractorsButton" label="Contractors" getImage="onGetImage" size="large" onAction="OnActionButton"/>
+<button id="ConsultancyButton" label="Consultancy" getImage="onGetImage" size="large" onAction="OnActionButton"/>
+<button id="ReportsButton" label="Reports" getImage="onGetImage"  size="large" onAction="OnActionButton"/>
+<button id="AboutButton" label="About" getImage="onGetImage" size="large" onAction="OnActionButton"/>
+<button id="CloseButton" label="Close" getImage="onGetImage" size="large" onAction="OnActionButton"/>
+               </group>
+
+<group id="grpSearch" label="Tools"  visible="true">
+<control idMso="SortSelectionMenu"/>
+<control idMso="FilterClearAllFilters"/>
+<control idMso="RecordsDeleteRecord"/>
+<control idMso="SortUp"/>
+<control idMso="SortDown"/>
+</group>
+
+
+<group id="grpQuit" label="Quit"  visible="true">
+<button id="ExitButton" label="Quit" getImage="onGetImage" size="large" onActioan="OnActionButton" screentip="Exit Pipeline"/>
+</group>
+
+            </tab>
+        </tabs>
+    </ribbon>
+</customUI>
+
+
+
+</xmp>
+
+</PRE>
+
+
+
+
+<p>These Access tips are brought to you by <a href="../index.html">DataHouseSoftware</a>  creators of <a href="../pipeline/index.html">Pipeline</a>  and <a href="../datahouse/index.html">DataHouse</a>  </p>
+						</div>
+
+
+					
+
+					</div>
+				
+
+
+					
+				</div>
+				<!-- end #content -->
+
+
+
+
+
+				<div id="sidebar">
+					<ul>
+						<li>
+							<!-- BEGIN Comm100 Live Chat Button Code -->
+
+
+
+<!-- End Comm100 Live Chat Button Code -->
+
+							<div style="clear: both;">&nbsp;</div>
+						</li>
+						
+						<li>Access Tips</li>
+						<UL>
+						    <li><a href="concatenate.html">Concatenate</a></li>
+						    <li><a href="ribbons.html">Ribbons</a></li>
+						    <li><a href="skype.html">Skype</a></li>
+						</UL>
+					</ul>
+				</div>
+				<!-- end #sidebar -->
+				<div style="clear: both;">&nbsp;</div>
+			</div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p>Copyright (c) DataHouseSoftware. All rights reserved. Design by <a href="http://www.freecsstemplates.org/"> CSS Templates</a>.</p>
+</div>
+<!-- end #footer -->
+</body>
+</html>

@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Sparkling   
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20100529
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>DataHouseSoftware - database software for small business</title>
+<link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<div id="wrapper">
+	<div id="header-wrapper">
+		<div id="header">
+			<div id="logo">
+				<!--<img border="0" align="center" src="images/dhlogo.jpg" alt="DataHouse - Shareware Invoicing Database, Contact History & Management and More." > -->
+
+				 <h1>DataHouseSoftware</h1>
+				<p>Database Software for Business</p>
+					<!--<img border="0" align="center" src="images/dhlogo.jpg" alt="DataHouse - Shareware Invoicing Database, Contact History & Management and More." > -->
+					<BR>
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+			</div>
+			<div id="menu">
+				<ul>
+					<li><a href="../index.html">Home</a></li>
+					<li><a href="../pipeline/index.html">Pipeline</a></li>
+					<li><a href="../datahouse/index.html">DataHouse</a></li>
+					<li><a href="../contact.html">Contact Us</a></li>
+					<li class="current_page_item"><a href="index.html">Access Tips</a></li>
+					<li><a href="../links.html">Links</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- end #header -->
+	<div id="page">
+		<div id="page-bgtop">
+			<div id="page-bgbtm">
+				<div id="content">
+				
+				<div class="post">
+						
+						<h3 class="title">Microsoft Access Tips</h3>
+						<div class="entry">
+							<p> A few of the functions we've used in DataHouse and Pipeline. Please feel free to use all and any tips, code etc in your own applications. All tips, code etc is provided without any warranty implied, use at your own risk.</P>
+
+<B>Concatenate</B> - Joining data from different fields<BR>
+<BR>
+To concatenate is to join together two or more fields using the & character. 
+
+Joining together two or more fields of the same record (that is different columns from the same row) is pretty straightforward and can be done in a query, a form or a report.
+Examples 
+<font color=blue><PRE>
+    FullName = [FirstName]&' '&[SecondName]
+    Like "*" & "Keyword 1" & "*" And Like "*" & "Keyword 2" & "*" 
+</font></pre>
+
+
+==================<BR>
+
+To join together several fields from different rows is trickier. We use the following function by Duane Hookum in our keywords form to join several keywords into a single text box and then add the contents to another<BR>
+<BR>
+<BR>
+1. On the keywords filed in Pipeline there is a hidden text field with data source
+<font color=blue><PRE>
+    =Concatenate("SELECT tblKeywords.Keyword FROM tblKeywords
+     WHERE (((tblKeywords.IncludeInList)=-1))
+     ORDER BY tblKeywords.Keyword;")
+</font></pre>
+
+This passes a SQL statement to the Concatenate function specifying to include all keywords from tblKeywords which have the IncludeInList flag set to true (aka -1)<BR>
+<BR>
+<BR>
+2. The following function Concatenate is by Duane Hookom, Access MVP, and is taken from <a href="http://www.tek-tips.com/faqs.cfm?fid=4233">http://www.tek-tips.com/faqs.cfm?fid=4233</a>   It joins together all the keywords from above. Basically it creates a recordset of the keywords we wish to include, then steps through the recordset adding a keyword each time
+<font color=blue><PRE>
+    Function Concatenate(pstrSQL As String, Optional pstrDelim As String = ", ") As String
+
+    'example
+    'tblFamily with FamID as numeric primary key
+    'tblFamMem with FamID, FirstName, DOB,...
+    'return a comma separated list of FirstNames
+    'for a FamID
+    '    John, Mary, Susan
+    'in a Query
+    '(This SQL statement assumes FamID is numeric)
+    '===================================
+    'SELECT FamID,
+    'Concatenate("SELECT FirstName FROM tblFamMem
+    '     WHERE FamID =" & [FamID]) as FirstNames
+    'FROM tblFamily
+    '===================================
+    '
+    'If the FamID is a string then the SQL would be
+    '===================================
+    'SELECT FamID,
+    'Concatenate("SELECT FirstName FROM tblFamMem
+    '     WHERE FamID =""" & [FamID] & """") as FirstNames
+    'FROM tblFamily
+    '===================================
+
+
+    Dim rs As New ADODB.Recordset
+        rs.Open pstrSQL, CurrentProject.Connection, adOpenKeyset, adLockOptimistic
+
+    Dim strConcat As String 'build return string
+
+        With rs
+        If Not .EOF Then
+            .MoveFirst
+            Do While Not .EOF
+                strConcat = strConcat & _
+             .Fields(0) & pstrDelim
+             .MoveNext
+            Loop
+        End If
+
+        .Close
+        End With
+        Set rs = Nothing
+
+
+    If Len(strConcat) > 0 Then
+        strConcat = Left(strConcat, _
+        Len(strConcat) - Len(pstrDelim))
+    End If
+
+    Concatenate = strConcat
+
+    End Function
+
+</font></pre>
+
+
+3. Finally in a button on the keywords form we push the contents of the (hidden) text box into a field on another open form. You can see we're concatenating fields from different forms, ASCII characters, text in quotation marks and the current Date. 
+<font color=blue><PRE>
+    Dim strNotes As String
+    strNotes = Forms!frmContact!txtContactGeneralNotes _
+                & Chr(13) & Chr(10) & Chr(13) & Chr(10) _
+                & "Keywords Added: " & Date & Chr(13) & Chr(10) & Me.txtKeywordList
+
+
+    Forms!frmContact!txtContactGeneralNotes = strNotes
+</font></pre>
+
+
+
+
+<p>These Access tips are brought to you by <a href="index.html">DataHouseSoftware</a>  creators of <a href="pipeline/index.html">Pipeline</a>  and <a href="datahouse.html">DataHouse</a>  </p>
+						</div>
+
+
+					
+
+					</div>
+				
+
+
+					
+				</div>
+				<!-- end #content -->
+
+
+
+
+
+				<div id="sidebar">
+					<ul>
+						<li>
+							<!-- BEGIN Comm100 Live Chat Button Code -->
+
+
+
+<!-- End Comm100 Live Chat Button Code -->
+
+							<div style="clear: both;">&nbsp;</div>
+						</li>
+						
+						<li>Access Tips</li>
+						<UL>
+						    <li><a href="concatenate.html">Concatenate</a></li>
+						    <li><a href="ribbons.html">Ribbons</a></li>
+						    <li><a href="skype.html">Skype</a></li>
+						</UL>
+					</ul>
+				</div>
+				<!-- end #sidebar -->
+				<div style="clear: both;">&nbsp;</div>
+			</div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p>Copyright (c) DataHouseSoftware. All rights reserved. Design by <a href="http://www.freecsstemplates.org/"> CSS Templates</a>.</p>
+</div>
+<!-- end #footer -->
+</body>
+</html>

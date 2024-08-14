@@ -1,0 +1,7 @@
+New features in this version include
+
+* Pipeline is no free multiple users
+
+
+
+

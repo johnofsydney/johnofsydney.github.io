@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Sparkling   
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20100529
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>DataHouseSoftware - database software for small business</title>
+<link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<div id="wrapper">
+	<div id="header-wrapper">
+		<div id="header">
+			<div id="logo">
+				<!--<img border="0" align="center" src="images/dhlogo.jpg" alt="DataHouse - Shareware Invoicing Database, Contact History & Management and More." > -->
+
+				 <h1>DataHouseSoftware</h1>
+				<p>Database Software for Business</p>
+					<!--<img border="0" align="center" src="images/dhlogo.jpg" alt="DataHouse - Shareware Invoicing Database, Contact History & Management and More." > -->
+					<BR>
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+			</div>
+			<div id="menu">
+				<ul>
+					<li><a href="../index.html">Home</a></li>
+					<li><a href="../pipeline/index.html">Pipeline</a></li>
+					<li><a href="../datahouse/index.html">DataHouse</a></li>
+					<li><a href="../contact.html">Contact Us</a></li>
+					<li class="current_page_item"><a href="index.html">Access Tips</a></li>
+					<li><a href="../links.html">Links</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- end #header -->
+	<div id="page">
+		<div id="page-bgtop">
+			<div id="page-bgbtm">
+				<div id="content">
+				
+				<div class="post">
+						
+						<h3 class="title">Microsoft Access Tips</h3>
+						<div class="entry">
+							<p> A few of the functions we've used in DataHouse and Pipeline. Please feel free to use all and any tips, code etc in your own applications. All tips, code etc is provided without any warranty implied, use at your own risk.</P>
+
+
+
+<BR>
+<BR>
+<B>Skype and MS Access</B> - Making a call using Skype<BR>
+<OL Type="1">
+<LI>Double clicking the text box containing the phone number runs the function CallToNumber and passes it the number in the text box.
+<LI>CallToNumber
+<UL>
+<LI>Takes the number passed from the double click event.
+<LI>Strips away the following characters from the number: " ", "-", "(" and ")"
+<LI>Checks the first character, 
+<UL>
+<LI>if this is a "+", the function assumes the number is formatted as an international number such as "+61245674567".
+<LI>If this is a "0", then this zero is replaced with "+" and the country code specified on another form
+</UL>
+<LI>Initiates the call. If Skype is properly installed it will start dialling now.
+</UL>
+<LI>Should work with other VOIP software too, nothing in the code is Skype specific
+</OL>
+
+<PRE>
+<font color=blue>
+	===
+
+        Private Sub txtContactMobile_DblClick(Cancel As Integer) 
+        On Error GoTo HandleErr
+
+	     CallToNumber ([txtContactMobile])
+    
+	ExitHere:
+	  Exit Sub
+
+	HandleErr:
+	  MsgBox "Error"
+
+	End Sub
+	===
+
+	Public Function CallToNumber(strNumber As String) 
+        On Error GoTo HandleErr
+
+	    Dim strPhoneNumberCleaned, strFirstDigit, strCall, strCountryCode, stLink As String
+
+	    strCountryCode = [Forms]![frmCurrentUserDetails]![txtCountryCode]
+	    strPhoneNumberCleaned = Replace((Replace((Replace((Replace(strNumber, " ", "")), "-", "")), "(", "")), ")", "")
+	    strFirstDigit = Left(strPhoneNumberCleaned, 1)
+    
+	    strCall = strCountryCode & strPhoneNumberCleaned
+    
+	    If strFirstDigit = "+" Then
+	        strCall = strPhoneNumberCleaned
+	    End If
+        
+	    If strFirstDigit = "0" Then
+	        strCall = strCountryCode & Right(strPhoneNumberCleaned, (Len(strPhoneNumberCleaned) - 1))
+	    End If
+    
+            
+	    stLink = "callto://" & strCall
+	    Application.FollowHyperlink stLink
+    
+
+	ExitHere:
+ 	  Exit Function
+
+	HandleErr:
+	  MsgBox "Error"
+
+	End Function
+
+</font></pre>
+
+
+
+
+These Access tips are brought to you by <a href="index.htm">DataHouseSoftware</a>  creators of <a href="pipeline/index.htm">Pipeline</a>  and <a href="datahouse.htm">DataHouse</a>  
+
+
+
+						</div>
+
+
+					
+
+					</div>
+				
+
+
+					
+				</div>
+				<!-- end #content -->
+
+
+
+
+
+				<div id="sidebar">
+					<ul>
+						<li>
+							<!-- BEGIN Comm100 Live Chat Button Code -->
+
+
+
+<!-- End Comm100 Live Chat Button Code -->
+
+							<div style="clear: both;">&nbsp;</div>
+						</li>
+						
+						<li>Access Tips</li>
+						<UL>
+						    <li><a href="concatenate.html">Concatenate</a></li>
+						    <li><a href="ribbons.html">Ribbons</a></li>
+						    <li><a href="skype.html">Skype</a></li>
+						</UL>
+					</ul>
+				</div>
+				<!-- end #sidebar -->
+				<div style="clear: both;">&nbsp;</div>
+			</div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p>Copyright (c) DataHouseSoftware. All rights reserved. Design by <a href="http://www.freecsstemplates.org/"> CSS Templates</a>.</p>
+</div>
+<!-- end #footer -->
+</body>
+</html>
